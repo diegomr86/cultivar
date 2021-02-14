@@ -1,0 +1,116 @@
+<template>
+  <div class="login bg-green text-center">
+    <b-container>
+      <b-row v-if="show_login" align-v="center" class="full-height">
+        <b-col md="8" offset-md="2" class="pt-3 pb-3">
+          <b-card>
+            <b-card-body>
+              <img src="~/assets/img/logo.png" />
+              <p class="mb-4 mt-4">
+                Seja bem vindo ao <br /><strong>Cultivar! Brasil</strong>
+              </p>
+              <p>Para melhorar sua experiencia selecione sua região abaixo:</p>
+              <div>
+                <b-button
+                  variant="primary"
+                  block
+                  @click="setRegion('Centro-oeste')"
+                >
+                  Centro-oeste
+                </b-button>
+                <b-button
+                  variant="primary"
+                  block
+                  @click="setRegion('Nordeste')"
+                >
+                  Nordeste
+                </b-button>
+                <b-button variant="primary" block @click="setRegion('Norte')">
+                  Norte
+                </b-button>
+                <b-button variant="primary" block @click="setRegion('Sudeste')">
+                  Sudeste
+                </b-button>
+                <b-button variant="primary" block @click="setRegion('Sul')">
+                  Sul
+                </b-button>
+                <b-button variant="primary" block @click="clearRegion()">
+                  Brasil todo
+                </b-button>
+              </div>
+              <!-- <form class="form-auth-small" @submit.prevent="login">
+                <div class="form-group">
+                  <label for="signin-email" class="control-label sr-only">
+                    Nome de usuário ou e-mail
+                  </label>
+                  <input
+                    v-model="form.email"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nome de usuário ou e-mail"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="signin-password" class="control-label sr-only">
+                    Senha
+                  </label>
+                  <input
+                    v-model="form.password"
+                    type="password"
+                    class="form-control"
+                    placeholder="Senha"
+                  />
+                </div>
+                <b-alert v-if="error" variant="danger" show>{{
+                  error
+                }}</b-alert>
+                <div v-if="isLoading" class="alert alert-info">
+                  <i class="fa fa-spinner fa-spin" /> Fazendo login...
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                  ENTRAR
+                </button>
+              </form> -->
+            </b-card-body>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
+</template>
+<script>
+export default {
+  layout: 'front',
+  data() {
+    return {
+      show_login: false,
+      form: {
+        email: '',
+        password: '',
+      },
+    }
+  },
+  created() {
+    if (this.currentRegion) {
+      this.$router.push('/bem-vindo')
+    } else {
+      this.show_login = true
+    }
+  },
+  methods: {
+    async login() {
+      this.error = null
+      this.isLoading = true
+      const resp = await this.$auth
+        .loginWith('local', { data: this.form })
+        .catch((error) => {
+          this.error = error.response.data
+        })
+      if (resp) {
+        this.$router.push(this.$route.query.redirect || '/bem-vindo')
+      }
+      this.isLoading = false
+    },
+  },
+}
+</script>

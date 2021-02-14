@@ -1,0 +1,606 @@
+/* stylelint-disable */
+@import "vue-select/src/scss/vue-select.scss"
+@import "leaflet/dist/leaflet.css"
+@import "~assets/css/style.sass"
+
+$blue: #2f4858
+$green: #009d6b
+
+$brown1: #534741
+$brown3: #c69c6d
+$brown2: #785b4b
+$red: #dc3545
+$gray1: #333
+$gray2: #555
+$gray3: #777
+$gray4: #ccc
+$gray5: #F1ECE4
+$white: #fff
+
+body
+  color: $gray1
+a, a:hover, a:active, a:focus, a:visited
+  text-decoration: none
+  cursor: pointer
+  color: $green
+
+th.actions, td.actions
+  width: auto
+  text-align: center
+  .fa
+    margin-bottom: 5px
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:visited
+  background-color: $green !important
+  border-color: $green !important
+  box-shadow: none !important
+  color: $white !important
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus, .btn-secondary:visited
+  background-color: $blue !important
+  border-color: $blue !important
+  box-shadow: none !important
+  color: $white
+
+.btn-default
+  box-shadow: none !important
+  border-color: $gray5
+  color: $gray1 !important
+.badge
+  color: $white !important
+.bg-blue
+  background-color: $blue
+.bg-green
+  background-color: $green !important
+
+.red
+  color: $red !important
+
+.text-gray
+  color: $brown2
+
+.pointer
+  cursor: pointer
+
+.full-height
+  min-height: 100vh
+// .card
+//   background-color: transparent !important
+.navbar
+  background-color: $white
+  box-shadow: 1px 2px 3px rgba(0,0,0,.1)
+  .navbar-brand
+    color: $blue
+    .logo
+      max-width: 44px
+      margin-right: 5px
+  .sidebar
+    margin: 15px -16px -16px -16px
+.sidebar-wrapper
+  flex-basis: 400px
+  min-height: calc(100vh - 72px)
+  background-color: $green
+.sidebar
+  border-radius: 0
+  color: $white
+  font-size: 16px
+  a
+    color: $white !important
+  .fa, .fas, .far
+    margin-right: 10px
+  .fa-chevron-down
+    margin-left: 5px
+  .bi-chevron-down
+    margin-left: 10px
+  .nav-item a
+    padding: 10px
+    // padding-left: 0
+  .list-group-item
+    background: $green
+    border: 0
+    padding: 20px
+    &.submenu
+      background: $blue
+  .nuxt-link-exact-active
+    background-color: $brown1
+
+.breadcrumb-wrapper
+  .breadcrumb
+    color: $white
+    background-color: $green
+    border-radius: 0
+    padding: 20px
+    margin-bottom: 20px
+    & > li + li:before
+      padding: 0 5px
+      color: $white
+      content: "\A0/\A0"
+    a
+      color: $white
+      font-weight: bold
+  .moon
+    width: 24px
+    height: 24px
+    border: 1px solid $white
+    background-color: $white
+    border-radius: 50%
+    float: right
+    margin-right: 20px
+    margin-top: -64px
+    overflow: hidden
+    cursor: pointer
+    transform: rotate(45deg)
+    .earth
+      background-color: $green
+      width: 100%
+      height: 100%
+      border-radius: 50%
+
+.b-table
+  tr > td, tr > th
+    vertical-align: middle !important
+    padding: 8px
+    font-size: 14px
+    &:first-child
+      padding-left: 0 !important
+    &:last-child
+      padding-left: 0 !important
+      text-align: right !important
+  a:not(.btn)
+    display: block
+    cursor: pointer
+    &:not([class*="text-"])
+      color: $gray1
+    small
+      color: $gray1
+  .b-table-bottom-row
+    background-color: $gray5
+
+.panel
+  h1
+    color: $gray1
+    font-size: 30px
+    margin: auto
+  .panel-body
+    padding: 0 20px
+  .tab-content
+    padding-top: 0
+  .nav-tabs
+    border-bottom: 1px solid $gray5
+    > li
+      margin-right: 1px
+      > a
+        margin-right: 0
+        &.active
+          background: $gray5
+        &:hover
+          color: $gray1
+  .tab-pane
+    padding: 15px 0
+  .tab-content, .info-content
+    margin-top: 30px
+  .tab-content th i, .info-content th i
+    color: $gray3
+  .tab-content td .specie img, .info-content td .specie img
+    height: 20px
+    margin-right: 20px
+  .tab-content td .group-pic img, .info-content td .group-pic img
+    height: 60px
+    margin-right: 20px
+  .main-actions
+    text-align: right
+    .btn
+      margin-bottom: 5px
+  .nav-tabs
+    border-bottom: 1px solid $gray5
+    font-size: 16px
+.input-file
+  font-size: 14px
+
+.modal-title
+  text-transform: uppercase
+  font-weight: 400
+  color: $gray1
+  float: left
+
+.modal-alert p
+  font-weight: 600
+  text-align: center
+  font-size: 18px
+  color: $gray1
+  margin: 50px auto
+
+.modal
+  img
+    border-radius: 4px
+  .panel
+    margin: 0
+    box-shadow: none
+    .panel-body
+      padding: 0
+
+.modal-body input
+  margin-bottom: 10px
+
+.modal-title
+  text-transform: uppercase
+  font-weight: 400
+  color: $gray1
+  float: left
+
+.modal-alert p
+  font-weight: 600
+  text-align: center
+  font-size: 18px
+  color: $gray1
+  margin: 50px auto
+
+.modal
+  img
+    border-radius: 4px
+  .panel
+    margin: 0
+    box-shadow: none
+    .panel-body
+      padding: 0
+
+.modal-open .modal
+  opacity: 1
+  .modal-content
+    top: 30px
+  &.fade
+    .modal-dialog
+      transform: none
+
+.item-title
+  span:not(.badge)
+    margin-left: 10px
+    &:first-child
+      margin-left: 0
+      margin-right: 10px
+  .badge
+    margin-right: 5px
+    font-size: 14px
+  .btn i
+    margin-right: 5px
+  .item-img
+    max-width: 100%
+    border-radius: 2%
+    display: block
+    float: left
+    margin-right: 25px
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2)
+  h1
+    margin-bottom: 10px
+    margin-top: 10px
+  p
+    font-style: italic
+    font-size: 15px
+
+form
+  input
+    &:not([type="checkbox"]):not([type="radio"]):not([class*="col-"]):not(.vs__search)
+      width: 100%
+  legend
+    color: $gray1
+    border: 0
+    font-weight: bold
+    font-size: 16px
+  .custom-control-label
+    font-weight: normal
+    padding-left: 10px
+    cursor: pointer
+  > .row, > .form-address > .row, > .form-bank-account > .row
+    border: 1px solid $gray5
+    color: $gray1
+    padding: 0
+    margin: 0
+    border-bottom: 0
+    &:last-child
+      border: 1px solid $gray5
+    > div
+      border-left: 1px solid $gray5
+      padding: 20px
+      &:first-child
+        border-left: 0
+    &.gray
+      background: $gray5
+  > .form-address > .row:last-child
+    border-bottom: 0
+  .custom-checkbox, .custom-radio
+    display: inline-block
+    width: 200px
+    cursor: pointer
+    label
+      font-weight: normal
+      cursor: pointer
+      display: inline
+  .form-control
+    font-size: 16px
+  .btn-primary
+    background: $green
+    border-color: $green
+  .text-danger
+    display: block
+
+.images_preview
+  img
+    width: 100%
+
+.ecosystem, .fruiting_season
+  .badge
+    font-size: 14px
+    margin-right: 2px
+    margin-top: 5px
+    padding: 7px
+  .forest
+    background: #2bb110
+  .thick
+    background: #eead2d
+  .swamp
+    background: #006400
+
+.search-input
+  background: url("~assets/img/search.png") no-repeat scroll 4px 4px
+  background-size: 24px
+  padding-left: 35px
+
+.years-filter
+  max-width: 100px
+  float: right
+  font-weight: bold
+
+.v-select
+  margin-bottom: 10px
+.vs__dropdown-menu, .vs__selected
+  .select-item
+    display: flex
+    align-items: center
+    img
+      float: left
+      max-width: 40px
+      margin-right: 10px
+    .desc
+      float: left
+.list-group-item
+  img
+    width: 30px
+    margin-right: 5px
+  div[class*="col-"]
+    padding: 15px
+    &:not(:first-child)
+      border-left: 1px solid $gray5
+    img
+      width: 100%
+  .row:not(:first-child)
+    border-top: 1px solid $gray5
+  .fa-pencil
+    width: 30px
+    text-align: right
+    height: 30px
+    margin-top: -10px
+    padding-top: 12px
+    font-size: 20px
+    cursor: pointer
+    padding-bottom: 30px
+  > a
+    color: $gray1
+    display: block
+.list-group
+  margin-bottom: 20px
+  table
+    tr
+      td
+        padding-top: 0
+        padding-bottom: 0
+        // margin: 0
+        border: none
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover
+  background-color: $green
+  border-color: $green
+
+.b-table
+  tr > td, tr > th
+    vertical-align: middle !important
+    padding: 8px
+    font-size: 14px
+    &:first-child
+      padding-left: 0 !important
+    &:last-child
+      padding-left: 0 !important
+      text-align: right !important
+  a:not(.btn)
+    display: block
+    cursor: pointer
+    &:not([class*="text-"])
+      color: $gray1
+    small
+      color: $gray1
+  .b-table-bottom-row
+    background-color: $gray5
+
+.weight
+  width: 100px !important
+  display: inline
+
+.seeds-select, .stock-items
+  input.weight
+    width: calc(100% - 172px) !important
+    height: 34px
+  .col-sm-6
+    border: none
+.seeds-select
+  .col-sm-6
+    padding-left: 0
+.stock-items
+  .btn
+    margin-top: 40px
+.inline
+  display: inline !important
+.stock, .requests
+  table
+    font-size: 14px
+    a
+      &:not([class*="text-"]):not(.btn)
+        color: $gray1
+  .stock_in
+    color: green
+  .stock_out
+    color: red
+
+.filters
+  legend
+    font-size: 16px
+    border-bottom: 0
+    margin-bottom: 5px
+  .row
+    margin-right: -5px
+    margin-left: -5px
+    div
+      &[class*="col-sm-"]
+        padding-left: 5px
+        padding-right: 5px
+    input:not(.vs__search), select
+      width: 100%
+      font-weight: bold
+      font-size: 14px
+      &::placeholder
+        color: $gray2
+        opacity: 1
+        font-weight: normal
+    .from_to
+      input
+        width: calc(50% - 50px)
+        display: inline-block
+    .filter-entity-select
+      .IZ-select
+        margin-bottom: 10px
+        float: left
+        width: calc(100%)
+      i
+        background-color: $white
+        cursor: pointer
+        width: 18px
+        height: 20px
+        text-align: center
+        margin-left: -22px
+        margin-top: 9px
+
+.fade.active
+  opacity: 1
+
+.date_time
+  .date
+    width: 60% !important
+    float: left
+    margin-right: 5px
+  input.time
+    width: calc(40% - 6px) !important
+    float: left
+    margin-right: 1px
+
+.weekly-summary
+  a
+    color: $gray1
+  .number
+    font-size: 26px
+    font-weight: 400
+.nav-buttons
+  padding: 30px 0
+  a
+    margin: 5px
+
+.table > thead > tr > th
+  border-bottom: 1px
+.receipt
+  .heading, .details
+    td
+      font-size: 13px
+      line-height: 16px
+  .total
+    font-weight: bold
+  .signature
+    border-top: 1px solid $gray1
+    max-width: 300px
+    margin: auto
+    margin-top: 80px
+    text-align: center
+    padding-top: 10px
+    p
+      margin-bottom: 0
+.vue-notification-group, .vue-notification, .notification-content
+  font-size: 18px
+  font-weight: bold
+
+@media (max-width: 992px)
+  .years-filter
+    max-width: 100%
+    float: none
+    margin-bottom: 20px
+  .menu-buttom
+    display: inline-block
+  .b-table
+    background: $white
+  .resume-table
+    width: calc(100% + 54px)
+    margin: 0 -27px
+
+@media (max-width: 768px)
+  .search-input
+    margin-top: 15px
+  form
+    div
+      &[class*="col-sm-"], &[class*="col-xs-"]
+        border-left: none
+        border-bottom: 1px solid $gray5
+    > .row, > .form-address > .row, > .row:last-child
+      border-bottom: none
+      border-top: none
+      &:first-child
+        border-top: 1px solid $gray5
+  .list-group-item
+    div
+      &[class*="col-sm-"], &[class*="col-xs-"]
+        &:not(:first-child)
+          border-left: 0
+          border-top: 1px solid $gray5
+  .seeds-select
+    .col-sm-6
+      margin-top: 10px
+      padding-left: 15px
+
+  .tab-content
+    .row.search input
+      position: static
+      right: 0
+      margin-top: 0
+      margin-bottom: 15px
+  .filters .row div[class*="col-sm-"]
+    clear: both
+
+  .b-table-bottom-row
+    display: block !important
+    text-align: center
+    td:empty
+      display: none !important
+
+@media (max-width: 576px)
+  .panel
+    .main-actions
+      margin-top: 15px
+      text-align: left
+    .tab-content
+      padding-top: 0
+    .nav-tabs
+      > li
+        width: 100%
+        display: block
+        border-radius: 0
+
+@media print
+  .main
+    width: 100%
+    .main-content, .container-fluid
+      padding: 0
+    .panel-body, .info-content
+      padding-top: 0
