@@ -13396,10 +13396,10 @@ vue-the-mask@^0.11.1:
   resolved "https://registry.yarnpkg.com/vue-the-mask/-/vue-the-mask-0.11.1.tgz#91ee01008354ae57bccc79bb61b65f32d971d9d5"
   integrity sha512-UquSfnSWejD0zAfcD+3jJ1chUAkOAyoxya9Lxh9acCRtrlmGcAIvd0cQYraWqKenbuZJUdum+S174atv2AuEHQ==
 
-vue2-filters@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/vue2-filters/-/vue2-filters-0.11.1.tgz#eaf899549d768cdead534d7c4866fdd8e7578b9f"
-  integrity sha512-eKFVfFGocv/zOUDh1ZI0dE407RMeI3M5T+kUXpE8v+PMP/aVLkK024wgg0DA9/VX/GV4UdgYt29kwLEdlZMAqQ==
+vue2-filters@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/vue2-filters/-/vue2-filters-0.12.0.tgz#6b90e8ed2104d3590d498d7d26fbb43c12af940d"
+  integrity sha512-9t70uXg1Pvf9ZF4tun2ZZVcv5+qd+0JJLBuAKUy4Nm0Ihaxo5Nn6iiMsBzuzwUyQIGPq3bSnk4boEVQJFN1DlQ==
 
 vue2-leaflet@^2.6.0:
   version "2.6.0"
