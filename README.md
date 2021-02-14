@@ -35,7 +35,6 @@ Cultivar uma horta é o melhor que você pode fazer para sua **segurança alimen
   - Continuous integration: **GitHub Actions**
   - Version control system: **Git**
 
-
 ## Build Setup
 
 ```bash
