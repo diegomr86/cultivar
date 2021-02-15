@@ -22,7 +22,7 @@ body
 a, a:hover, a:active, a:focus, a:visited
   text-decoration: none
   cursor: pointer
-  color: $green
+  color: $blue
 
 th.actions, td.actions
   width: auto
@@ -48,8 +48,19 @@ th.actions, td.actions
   color: $gray1 !important
 .badge
   color: $white !important
-.bg-blue
-  background-color: $blue
+  margin-right: 2px
+.badge-primary
+  background-color: $green !important
+  border-color: $green !important
+  box-shadow: none !important
+  color: $white !important
+.badge-default
+  box-shadow: none !important
+  background-color: $gray3
+  color: $white !important
+
+  .bg-blue
+    background-color: $blue
 .bg-green
   background-color: $green !important
 
@@ -64,8 +75,9 @@ th.actions, td.actions
 
 .full-height
   min-height: 100vh
-// .card
-//   background-color: transparent !important
+.login
+  .logo
+    max-width: 120px
 .navbar
   background-color: $white
   box-shadow: 1px 2px 3px rgba(0,0,0,.1)
@@ -111,6 +123,7 @@ th.actions, td.actions
     border-radius: 0
     padding: 20px
     margin-bottom: 20px
+    padding-right: 50px
     & > li + li:before
       padding: 0 5px
       color: $white

@@ -5,6 +5,6 @@ export const state = () => ({
 export const mutations = {
   setRegion(state, region) {
     state.region = region
-    window.localStorage.setItem('region', JSON.stringify(region))
+    window.localStorage.setItem('region', region)
   },
 }

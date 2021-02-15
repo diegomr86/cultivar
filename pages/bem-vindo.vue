@@ -10,11 +10,7 @@
         O que plantar esse mês?
       </b-button>
       <br />
-      <b-button
-        block
-        variant="primary"
-        to="/ferramentas/catalogo-de-hortalicas"
-      >
+      <b-button block variant="primary" to="/catalogo-de-especies">
         Catálogo de hortaliças
       </b-button>
       <br />

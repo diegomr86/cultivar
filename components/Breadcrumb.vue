@@ -95,6 +95,7 @@
           bambus, madeiras para construção e cabos para ferramentas.
         </p>
       </div>
+      <hr />
     </b-container>
   </div>
 </template>

@@ -5,9 +5,9 @@
         <b-col md="8" offset-md="2" class="pt-3 pb-3">
           <b-card>
             <b-card-body>
-              <img src="~/assets/img/logo.png" />
-              <p class="mb-4 mt-4">
-                Seja bem vindo ao <br /><strong>Cultivar! Brasil</strong>
+              <img src="~/assets/img/logo.png" class="logo" />
+              <p class="mb-4">
+                <strong>Cultivar! Brasil</strong>
               </p>
               <p>Para melhorar sua experiencia selecione sua região abaixo:</p>
               <div>

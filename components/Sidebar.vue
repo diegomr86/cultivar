@@ -8,7 +8,7 @@
         <b-nav-item to="/ferramentas/o-que-plantar-esse-mes">
           O que plantar esse mês?
         </b-nav-item>
-        <b-nav-item to="/ferramentas/catalogo-de-hortalicas">
+        <b-nav-item to="/catalogo-de-especies">
           Catálogo de hortaliças
         </b-nav-item>
       </b-nav>
