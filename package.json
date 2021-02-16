@@ -1,11 +1,11 @@
 {
-  "name": "cultivrar",
+  "name": "cultivar",
   "author": {
-    "name": "Terrakrya",
-    "email": "suporte@terrakrya.com",
-    "url": "http://www.terrakrya.com/"
+    "name": "Diego M. Rodrigues",
+    "email": "diegomr86@gmail.com",
+    "url": "https://diegomr86.github.io"
   },
-  "description": "Sistema de controle do fluxo das Redes de Sementes",
+  "description": "Site/aplicativo em português focado no Brasil com o objetivo de fortalecer a independência alimentar através do aprendizado coletivo e ferramentas que ajudam no cultivo",
   "version": "2.0.0",
   "private": true,
   "scripts": {

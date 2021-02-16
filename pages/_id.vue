@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="content">
     <breadcrumb :active="content.title" />
     <b-container fluid>
       <nuxt-content :document="content" />
@@ -9,9 +9,7 @@
 <script>
 export default {
   async asyncData({ $content, route }) {
-    console.log(route.params)
     const content = await $content(route.params.id).fetch()
-    console.log(content)
     return {
       content,
     }

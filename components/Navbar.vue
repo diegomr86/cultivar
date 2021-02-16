@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" class="p-3">
+  <b-navbar toggleable="md">
     <b-navbar-brand to="/bem-vindo">
       <img src="~/assets/img/logo.png" class="logo" />
       <strong>Cultivar!</strong> Brasil
@@ -18,6 +18,7 @@
         <b-button variant="secondary"
           ><i class="far fa-star" /> Melhore sua experiência</b-button
         >
+        <Region />
       </b-nav-item>
     </b-navbar-nav>
   </b-navbar>

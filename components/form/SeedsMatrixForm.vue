@@ -2,7 +2,7 @@
   <div class="seeds-matrix-form">
     <breadcrumb
       :links="[['Matrizes de semente', '/matrizes-de-sementes']]"
-      :active="isEditing() ? form.name : 'Cadastrar'"
+      :active="formEditing() ? form.name : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -164,7 +164,7 @@ export default {
         return a.title.localeCompare(b.title)
       })
 
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     }
   },
@@ -185,10 +185,10 @@ export default {
           this.isSending = true
           this.error = null
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
+            method: this.formEditing() ? 'PUT' : 'POST',
             url:
               'seeds_matrixes' +
-              (this.isEditing() ? '/' + this.$route.params.id : ''),
+              (this.formEditing() ? '/' + this.$route.params.id : ''),
             data: this.form,
           })
             .then((resp) => {

@@ -79,12 +79,8 @@ if (!Vue.__my_mixin__) {
         }
         return false
       },
-      isEditing() {
+      formEditing() {
         return !!this.$route.params.id
-      },
-      setRegion(region) {
-        this.$store.commit('setRegion', region)
-        this.$router.push('/bem-vindo')
       },
       apiDataToForm(form, data) {
         Object.keys(form).forEach((key) => {

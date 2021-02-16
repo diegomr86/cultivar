@@ -2,7 +2,7 @@
   <div class="collection-form">
     <breadcrumb
       :links="[['Coletas de sementes', '/coletas']]"
-      :active="isEditing() ? 'Coleta ' : 'Cadastrar'"
+      :active="formEditing() ? 'Coleta ' : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -173,7 +173,7 @@ export default {
     }
   },
   created() {
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     }
   },
@@ -204,10 +204,10 @@ export default {
               this.date_time.date + 'T' + this.date_time.time + ':00'
           }
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
+            method: this.formEditing() ? 'PUT' : 'POST',
             url:
               'collections' +
-              (this.isEditing() ? '/' + this.$route.params.id : ''),
+              (this.formEditing() ? '/' + this.$route.params.id : ''),
             data: this.form,
           })
             .then((resp) => {

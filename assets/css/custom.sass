@@ -86,12 +86,13 @@ th.actions, td.actions
     .logo
       max-width: 44px
       margin-right: 5px
-  .sidebar
-    margin: 15px -16px -16px -16px
+  #sidebar
+    margin: 15px -16px -28px -16px
 .sidebar-wrapper
   flex-basis: 400px
   min-height: calc(100vh - 72px)
   background-color: $green
+  border-right: 1px solid #ddd
 .sidebar
   border-radius: 0
   color: $white
@@ -114,7 +115,8 @@ th.actions, td.actions
     &.submenu
       background: $blue
   .nuxt-link-exact-active
-    background-color: $brown1
+    background-color: $green
+    border-radius: 3px
 
 .breadcrumb-wrapper
   .breadcrumb

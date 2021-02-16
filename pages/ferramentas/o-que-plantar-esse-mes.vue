@@ -8,7 +8,11 @@
       <div class="text-center">
         <h3 class="text-center">{{ currentMonth.name }}</h3>
         <p>{{ currentMonth.description }}</p>
-        <p>Confira abaixo algumas sugestões para este mês:</p>
+        <p>
+          Confira abaixo algumas sugestões para este mês no
+          <strong>{{ currentRegion || 'Brasil' }}</strong
+          >:
+        </p>
       </div>
       <ul class="list-unstyled">
         <b-media
@@ -46,8 +50,12 @@ export default {
   computed: {
     especies() {
       return especies.filter((especie) => {
-        if (especie.plantio[this.currentRegion] === 'ano todo') return true
-        if (especie.plantio[this.currentRegion] === '*') {
+        if (
+          !this.currentRegion ||
+          especie.plantio[this.currentRegion] === 'ano todo'
+        ) {
+          return true
+        } else if (especie.plantio[this.currentRegion] === '*') {
           return false
         } else {
           const plantio = especie.plantio[this.currentRegion].split('-')

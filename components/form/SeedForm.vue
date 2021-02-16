@@ -2,7 +2,7 @@
   <div class="seed-form">
     <breadcrumb
       :links="[['Sementes', '/sementes']]"
-      :active="isEditing() ? form.name : 'Cadastrar'"
+      :active="formEditing() ? form.name : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -20,7 +20,7 @@
               </b-form-group>
             </div>
           </div>
-          <div v-if="isEditing() || form.specie" class="row">
+          <div v-if="formEditing() || form.specie" class="row">
             <div class="col-sm-12">
               <b-form-group label="Nome da semente *">
                 <b-form-input
@@ -40,7 +40,7 @@
               </b-form-group>
             </div>
           </div>
-          <div v-if="isEditing() || form.specie" class="row gray">
+          <div v-if="formEditing() || form.specie" class="row gray">
             <div class="col-md-3 col-sm-6">
               <b-form-group label="Preço *">
                 <money v-model="form.price"></money>
@@ -69,7 +69,7 @@
               </b-form-group>
             </div>
           </div>
-          <div v-if="isEditing() || form.specie" class="row gray">
+          <div v-if="formEditing() || form.specie" class="row gray">
             <div class="col-sm-6">
               <b-form-group label="Época da frutificação">
                 <b-form-checkbox-group
@@ -90,7 +90,7 @@
             </div>
           </div>
           <form-submit
-            v-if="isEditing() || form.specie"
+            v-if="formEditing() || form.specie"
             :errors="error"
             :sending="isSending"
           />
@@ -146,7 +146,7 @@ export default {
   },
 
   created() {
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     }
 
@@ -174,8 +174,10 @@ export default {
           this.isSending = true
           this.error = null
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
-            url: this.isEditing() ? 'seeds/' + this.$route.params.id : 'seeds',
+            method: this.formEditing() ? 'PUT' : 'POST',
+            url: this.formEditing()
+              ? 'seeds/' + this.$route.params.id
+              : 'seeds',
             data: this.form,
           })
             .then((resp) => {
@@ -186,7 +188,7 @@ export default {
                 } else {
                   this.$router.replace('/sementes/' + seed._id)
                 }
-                if (this.isEditing()) {
+                if (this.formEditing()) {
                   this.notify('Semente atualizada com sucesso')
                 } else {
                   this.notify('Semente cadastrada com sucesso')

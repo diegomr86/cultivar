@@ -2,16 +2,18 @@
   <div id="app">
     <div id="wrapper" class="bg-brown-1">
       <Navbar />
-      <div class="d-flex flex-nowrap">
-        <div class="d-none d-md-block sidebar-wrapper">
+      <b-row no-gutters>
+        <b-col md="3" fluid class="sidebar-wrapper d-none d-md-block">
           <Sidebar />
-        </div>
-        <div class="main bg-white flex-grow-1 pb-4">
+        </b-col>
+        <b-col class="main bg-white pb-4">
           <Nuxt />
-        </div>
-      </div>
+        </b-col>
+      </b-row>
     </div>
-    <notifications />
+    <client-only>
+      <notifications />
+    </client-only>
   </div>
 </template>
 
@@ -23,6 +25,11 @@ export default {
   components: {
     Navbar,
     Sidebar,
+  },
+  created() {
+    if (this.$route.query.regiao) {
+      this.$store.commit('setRegion', this.$route.query.regiao)
+    }
   },
 }
 </script>

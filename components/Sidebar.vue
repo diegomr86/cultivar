@@ -44,6 +44,16 @@
         <b-nav-item to="/colabore"> Colabore </b-nav-item>
       </b-nav>
     </b-list-group-item>
+    <b-list-group-item>
+      <i class="far fa-star" /> Melhore sua experiência
+    </b-list-group-item>
+    <b-list-group-item class="submenu">
+      <b-nav vertical>
+        <b-nav-item>
+          <Region variant="secondary" :show-icon="false" />
+        </b-nav-item>
+      </b-nav>
+    </b-list-group-item>
     <b-list-group-item v-if="currentUser">
       <i class="fa fa-user" /> {{ currentUser.name }}
     </b-list-group-item>

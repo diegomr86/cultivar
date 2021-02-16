@@ -2,7 +2,7 @@
   <div class="request-form">
     <breadcrumb
       :links="[['Encomendas', '/encomendas']]"
-      :active="isEditing() ? 'Encomenda ' + form.code : 'Cadastrar'"
+      :active="formEditing() ? 'Encomenda ' + form.code : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -173,7 +173,7 @@ export default {
   },
 
   created() {
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     }
   },
@@ -195,9 +195,10 @@ export default {
           this.error = null
 
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
+            method: this.formEditing() ? 'PUT' : 'POST',
             url:
-              'orders' + (this.isEditing() ? '/' + this.$route.params.id : ''),
+              'orders' +
+              (this.formEditing() ? '/' + this.$route.params.id : ''),
             data: this.form,
           })
             .then((resp) => {

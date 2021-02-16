@@ -163,7 +163,7 @@ export default {
   },
   created() {
     this.list()
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit()
     }
   },

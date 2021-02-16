@@ -4,7 +4,7 @@
       :links="[
         [currentRoleText, '/usuarios?role=' + ($route.query.role || '')],
       ]"
-      :active="isEditing() ? form.name : 'Cadastrar'"
+      :active="formEditing() ? form.name : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -108,7 +108,7 @@
                   name="email"
                 />
                 <field-error :msg="veeErrors" field="email" />
-                <div v-if="isEditing()" class="text-right">
+                <div v-if="formEditing()" class="text-right">
                   <a class="pointer" @click="changePassword">Alterar senha</a>
                 </div>
               </b-form-group>
@@ -223,7 +223,7 @@ export default {
   },
   computed: {
     showPasswordFields() {
-      return !this.isEditing() || this.show_password
+      return !this.formEditing() || this.show_password
     },
     currentRoleText() {
       if (this.$route.query.role === 'collector') {
@@ -236,7 +236,7 @@ export default {
     },
   },
   created() {
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     } else if (this.$route.query.role) {
       this.form.role = this.$route.query.role
@@ -271,8 +271,10 @@ export default {
           this.error = null
 
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
-            url: this.isEditing() ? 'users/' + this.$route.params.id : 'users',
+            method: this.formEditing() ? 'PUT' : 'POST',
+            url: this.formEditing()
+              ? 'users/' + this.$route.params.id
+              : 'users',
             data: this.form,
           })
             .then((resp) => {

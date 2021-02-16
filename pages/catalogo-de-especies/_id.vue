@@ -60,7 +60,7 @@
               :to="'/catalogo-de-especies/' + specieByName(companheira).slug"
               >{{ specieByName(companheira).nome }}</n-link
             >
-            <span class="badge badge-default" v-else>{{ companheira }}</span>
+            <span v-else class="badge badge-default">{{ companheira }}</span>
           </span>
         </p>
       </div>

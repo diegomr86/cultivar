@@ -1,6 +1,6 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
   serverMiddleware: ['~/api/index.js'],
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -31,12 +31,12 @@ export default {
   plugins: [
     '~/plugins/global-mixin',
     '~/plugins/axios-api',
-    '~/plugins/vue-the-mask',
     '~/plugins/vue-moment',
-    '~/plugins/vue-notification',
     '~/plugins/vue2-filters',
     '~/plugins/vee-validate',
-    '~/plugins/v-money',
+    { src: '~/plugins/vue-notification', ssr: false },
+    { src: '~/plugins/vue-the-mask', ssr: false },
+    { src: '~/plugins/v-money', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

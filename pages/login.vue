@@ -14,27 +14,31 @@
                 <b-button
                   variant="primary"
                   block
-                  @click="setRegion('Centro-oeste')"
+                  to="/bem-vindo?regiao=Centro-este"
                 >
                   Centro-oeste
                 </b-button>
                 <b-button
                   variant="primary"
                   block
-                  @click="setRegion('Nordeste')"
+                  to="/bem-vindo?regiao=Nordeste"
                 >
                   Nordeste
                 </b-button>
-                <b-button variant="primary" block @click="setRegion('Norte')">
+                <b-button variant="primary" block to="/bem-vindo?regiao=Norte">
                   Norte
                 </b-button>
-                <b-button variant="primary" block @click="setRegion('Sudeste')">
+                <b-button
+                  variant="primary"
+                  block
+                  to="/bem-vindo?regiao=Sudeste"
+                >
                   Sudeste
                 </b-button>
-                <b-button variant="primary" block @click="setRegion('Sul')">
+                <b-button variant="primary" block to="/bem-vindo?regiao=Sul">
                   Sul
                 </b-button>
-                <b-button variant="primary" block @click="clearRegion()">
+                <b-button variant="primary" block to="/bem-vindo?regiao=">
                   Brasil todo
                 </b-button>
               </div>

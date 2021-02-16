@@ -2,7 +2,7 @@
   <div class="specie-form">
     <breadcrumb
       :links="[['Espécies', '/especies']]"
-      :active="isEditing() ? form.scientific_name : 'Cadastrar'"
+      :active="formEditing() ? form.scientific_name : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -257,7 +257,7 @@ export default {
   },
 
   created() {
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     }
   },
@@ -290,8 +290,8 @@ export default {
           }
 
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
-            url: this.isEditing()
+            method: this.formEditing() ? 'PUT' : 'POST',
+            url: this.formEditing()
               ? 'species/' + this.$route.params.id
               : 'species',
             data: this.form,

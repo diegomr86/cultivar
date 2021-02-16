@@ -2,7 +2,7 @@
   <div class="group-form">
     <breadcrumb
       :links="[['Redes', '/redes']]"
-      :active="isEditing() ? form.name : 'Cadastrar'"
+      :active="formEditing() ? form.name : 'Cadastrar'"
     />
     <div class="panel">
       <div class="panel-body">
@@ -231,7 +231,7 @@ export default {
     }
   },
   created() {
-    if (this.isEditing()) {
+    if (this.formEditing()) {
       this.edit(this.$route.params.id)
     }
   },
@@ -256,10 +256,10 @@ export default {
           this.error = null
 
           this.$axios({
-            method: this.isEditing() ? 'PUT' : 'POST',
+            method: this.formEditing() ? 'PUT' : 'POST',
             url:
               'networks' +
-              (this.isEditing() ? '/' + this.$route.params.id : ''),
+              (this.formEditing() ? '/' + this.$route.params.id : ''),
             data: this.form,
           })
             .then((resp) => {
