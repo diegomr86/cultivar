@@ -1,7 +1,6 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
-  serverMiddleware: ['~/api/index.js'],
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Cultivar!',
@@ -30,7 +29,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/global-mixin',
-    '~/plugins/axios-api',
     '~/plugins/vue-moment',
     '~/plugins/vue2-filters',
     '~/plugins/vee-validate',
@@ -68,9 +66,7 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    baseURL: (process.env.BASE_URL || '') + '/api/',
-  },
+  axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -106,11 +102,6 @@ export default {
       },
     },
     scope: 'role',
-  },
-  proxy: {
-    pathRewrite: {
-      '^/api/': '/',
-    },
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

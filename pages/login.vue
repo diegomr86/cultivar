@@ -98,11 +98,7 @@ export default {
     }
   },
   created() {
-    if (this.currentRegion) {
-      this.$router.push('/bem-vindo')
-    } else {
-      this.show_login = true
-    }
+    this.show_login = true
   },
   methods: {
     async login() {
