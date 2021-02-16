@@ -81,7 +81,7 @@ export default {
   methods: {
     uploadImages(e) {
       this.isLoading = true
-      this.error = null
+      this.currentError = null
       const files = e.target.files
 
       for (let i = 0; i < files.length; i++) {

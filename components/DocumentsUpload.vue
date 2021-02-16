@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     uploadDocuments(e) {
-      this.error = null
+      this.currentError = null
       this.isLoading = true
       const files = e.target.files || e.dataTransfer.files
       for (let i = 0; i < files.length; i++) {

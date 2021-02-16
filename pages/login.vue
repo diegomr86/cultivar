@@ -1,15 +1,15 @@
 <template>
-  <div class="login bg-green text-center">
+  <div class="login text-center">
     <b-container>
       <b-row v-if="show_login" align-v="center" class="full-height">
         <b-col md="8" offset-md="2" class="pt-3 pb-3">
-          <b-card>
+          <b-card class="bg-blue text-white">
             <b-card-body>
               <img src="~/assets/img/logo.png" class="logo" />
-              <p class="mb-4">
-                <strong>Cultivar! Brasil</strong>
-              </p>
-              <p>Para melhorar sua experiencia selecione sua região abaixo:</p>
+              <h4 class="mb-4 text-white">
+                <strong>Cultivar!</strong> Brasil
+              </h4>
+              <p>Seja bem vindo!<br /><small> Para melhorar sua experiencia selecione sua região abaixo:</small></p>
               <div>
                 <b-button
                   variant="primary"
@@ -103,12 +103,12 @@ export default {
   },
   methods: {
     async login() {
-      this.error = null
+      this.currentError = null
       this.isLoading = true
       const resp = await this.$auth
         .loginWith('local', { data: this.form })
         .catch((error) => {
-          this.error = error.response.data
+          this.currentError = error.response.data
         })
       if (resp) {
         this.$router.push(this.$route.query.redirect || '/bem-vindo')

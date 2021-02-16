@@ -7,7 +7,7 @@
     <b-container fluid>
       <div class="text-center">
         <p>
-          Espécies mais cultivadas no <strong>{{ currentRegion }}</strong>
+          Espécies mais cultivadas no <strong>{{ currentRegion || 'Brasil' }}</strong>
         </p>
       </div>
       <ul class="list-unstyled">

@@ -10,6 +10,9 @@ A ideia nessa nova fase é lançar mensalmente melhorias e novas funcionalidades
 
 Para que isso aconteça, precisamos de sua ajuda. Veja abaixo como você pode colaborar:
 
+## Seja um padrinho
+[Apoie este projeto!](https://www.padrim.com.br/cultivar)
+
 ### Dê um feedback
 
 Tem uma idéia, sugestão, critica ou encontrou algum problema? Manda um email para diegomr86@gmail.com
@@ -18,7 +21,7 @@ Tem uma idéia, sugestão, critica ou encontrou algum problema? Manda um email p
 
 Achou dá hora o aplicativo? Compartilhe com seus amigos: https://cultivar.terrakrya.com
 
-### Colaborando com o código
+### Colabore com o código
 
 Que tal treinar seus conhecimentos em programação ajudando a construír um projeto incrível e colaborando com a comunidade? Basta clonar o repositório do [projeto no github](https://github.com/diegomr86/cultivar) e mandar ver.
 
@@ -26,6 +29,12 @@ Que tal treinar seus conhecimentos em programação ajudando a construír um pro
 
 Para ajudar você pode fazer uma doação em qualquer das contas abaixo:
 
-##### Doe com cartão de crédito, débito ou boleto:
+Envie um pix para:
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HH697JKUJ45YG" target="_blank"><img src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif"></a>
+![Pix qrcode](/cultivar-qrcode.png)
+
+Chave CPF 02189888182
+
+Você também pode doar por com cartão de crédito, débito ou boleto:
+
+[![Faça uma doação](https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HH697JKUJ45YG)

@@ -44,10 +44,10 @@
         <b-nav-item to="/colabore"> Colabore </b-nav-item>
       </b-nav>
     </b-list-group-item>
-    <b-list-group-item>
+    <b-list-group-item class="ml-auto d-none">
       <i class="far fa-star" /> Melhore sua experiência
     </b-list-group-item>
-    <b-list-group-item class="submenu">
+    <b-list-group-item class="submenu ml-auto d-none">
       <b-nav vertical>
         <b-nav-item>
           <Region variant="secondary" :show-icon="false" />
@@ -61,6 +61,16 @@
       <b-nav vertical>
         <b-nav-item @click="$auth.logout()">Sair</b-nav-item>
       </b-nav>
+    </b-list-group-item>
+    <b-list-group-item>
+      <small>
+        Feito com
+        <client-only><i class="fas fa-heart m-0" title="Amor"></i></client-only> por
+        <br />
+        <a href="https://diegomr86.github.io" target="_blank" class="text-white"
+          ><strong>Diego M. Rodrigues</strong></a
+        >
+      </small>
     </b-list-group-item>
   </b-list-group>
 </template>

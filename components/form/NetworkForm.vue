@@ -253,7 +253,7 @@ export default {
       this.$validator.validate().then((isValid) => {
         if (isValid) {
           this.isSending = true
-          this.error = null
+          this.currentError = null
 
           this.$axios({
             method: this.formEditing() ? 'PUT' : 'POST',

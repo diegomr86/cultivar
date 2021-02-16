@@ -10,7 +10,7 @@ if (!Vue.__my_mixin__) {
   const globalMixin = {
     data() {
       return {
-        error: null,
+        currentError: null,
         isLoading: false,
         isSending: false,
         tiposDeUsuario,
@@ -107,16 +107,16 @@ if (!Vue.__my_mixin__) {
               error.response.status === 401 &&
               error.response.data.includes('invalid signature')
             ) {
-              this.error = 'Sessão expirada!'
+              this.currentError = 'Sessão expirada!'
               this.$auth.logout()
               this.$router.replace('/')
             } else if (error.response.data.message) {
-              this.error = error.response.data.message
+              this.currentError = error.response.data.message
             } else {
-              this.error = error.response.data
+              this.currentError = error.response.data
             }
           } else {
-            this.error = error.response
+            this.currentError = error.response
           }
         }
         this.isLoading = false

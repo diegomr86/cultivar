@@ -281,7 +281,7 @@ export default {
       this.$validator.validate().then((isValid) => {
         if (isValid) {
           this.isSending = true
-          this.error = null
+          this.currentError = null
           if (this.form.local_name) {
             this.form.local_name = this.form.local_name.split(', ')
           }
@@ -301,7 +301,7 @@ export default {
               if (specie && specie._id) {
                 this.$router.replace('/especies/' + specie.slug)
               } else {
-                this.error = specie
+                this.currentError = specie
               }
               this.isSending = false
             })

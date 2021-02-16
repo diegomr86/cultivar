@@ -242,7 +242,7 @@ export default {
   methods: {
     async list() {
       this.per_page = 20
-      this.error = null
+      this.currentError = null
       this.species = (
         await this.$axios.get('species', { params: this.filters })
       ).data

@@ -172,7 +172,7 @@ export default {
       this.$validator.validate().then((isValid) => {
         if (isValid) {
           this.isSending = true
-          this.error = null
+          this.currentError = null
           this.$axios({
             method: this.formEditing() ? 'PUT' : 'POST',
             url: this.formEditing()
@@ -194,7 +194,7 @@ export default {
                   this.notify('Semente cadastrada com sucesso')
                 }
               } else {
-                this.error = seed
+                this.currentError = seed
               }
               this.isSending = false
             })

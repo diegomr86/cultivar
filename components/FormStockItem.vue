@@ -401,7 +401,7 @@ export default {
       this.max_qtd = null
       this.seed_error = ''
       this.qtd_error = ''
-      this.error = null
+      this.currentError = null
       if (
         (this.form.group || this.form.collector) &&
         this.item_form.seed &&
@@ -458,7 +458,7 @@ export default {
         }
       } else {
         if (!this.form.group && !this.form.collector) {
-          this.error = 'Selecione um grupo ou coletor'
+          this.currentError = 'Selecione um grupo ou coletor'
         }
         return false
       }

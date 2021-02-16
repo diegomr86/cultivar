@@ -157,7 +157,7 @@ export default {
   },
   methods: {
     async list() {
-      this.error = null
+      this.currentError = null
       this.seeds = await this.loadList('seeds')
     },
     remove(id) {

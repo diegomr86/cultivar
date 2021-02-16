@@ -50,10 +50,8 @@ export default {
   computed: {
     especies() {
       return especies.filter((especie) => {
-        if (
-          !this.currentRegion ||
-          especie.plantio[this.currentRegion] === 'ano todo'
-        ) {
+        if (!this.currentRegion) return true
+        if (especie.plantio[this.currentRegion] === 'ano todo') {
           return true
         } else if (especie.plantio[this.currentRegion] === '*') {
           return false

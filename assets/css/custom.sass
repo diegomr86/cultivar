@@ -22,7 +22,7 @@ body
 a, a:hover, a:active, a:focus, a:visited
   text-decoration: none
   cursor: pointer
-  color: $blue
+  // color: $blue
 
 th.actions, td.actions
   width: auto
@@ -59,8 +59,8 @@ th.actions, td.actions
   background-color: $gray3
   color: $white !important
 
-  .bg-blue
-    background-color: $blue
+.bg-blue
+  background-color: $blue
 .bg-green
   background-color: $green !important
 
@@ -87,7 +87,8 @@ th.actions, td.actions
       max-width: 44px
       margin-right: 5px
   #sidebar
-    margin: 15px -16px -28px -16px
+    margin: 15px -16px -8px -16px
+    border-bottom: 1px solid $white
 .sidebar-wrapper
   flex-basis: 400px
   min-height: calc(100vh - 72px)
@@ -97,6 +98,7 @@ th.actions, td.actions
   border-radius: 0
   color: $white
   font-size: 16px
+  margin-bottom: 0 !important
   a
     color: $white !important
   .fa, .fas, .far

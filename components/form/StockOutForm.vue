@@ -184,7 +184,7 @@ export default {
       this.$validator.validate().then((isValid) => {
         if (isValid) {
           this.isSending = true
-          this.error = null
+          this.currentError = null
 
           if (this.form.qtd) {
             if (this.price) {
