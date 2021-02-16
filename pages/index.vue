@@ -1,4 +1,4 @@
 <script>
-import login from '@/pages/login'
-export default login
+import bemVindo from '@/pages/bem-vindo'
+export default bemVindo
 </script>

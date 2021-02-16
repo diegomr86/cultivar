@@ -11,7 +11,7 @@
       </b-button>
       <br />
       <b-button block variant="primary" to="/catalogo-de-especies">
-        Catálogo de hortaliças
+        Catálogo de espécies
       </b-button>
       <br />
       <b-button block variant="primary" to="/guia-de-cultivo/dicas-basicas">

@@ -76,7 +76,7 @@ export default {
   pwa: {
     manifest: {
       lang: 'pt-BR',
-      name: 'Cultivar! Brasil!',
+      name: 'Cultivar! Brasil',
       short_name: 'Cultivar!',
     },
   },
