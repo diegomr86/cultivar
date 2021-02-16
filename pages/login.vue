@@ -6,15 +6,18 @@
           <b-card class="bg-blue text-white">
             <b-card-body>
               <img src="~/assets/img/logo.png" class="logo" />
-              <h4 class="mb-4 text-white">
-                <strong>Cultivar!</strong> Brasil
-              </h4>
-              <p>Seja bem vindo!<br /><small> Para melhorar sua experiencia selecione sua região abaixo:</small></p>
+              <h4 class="mb-4 text-white"><strong>Cultivar!</strong> Brasil</h4>
+              <p>
+                Seja bem vindo!<br /><small>
+                  Para melhorar sua experiencia selecione sua região
+                  abaixo:</small
+                >
+              </p>
               <div>
                 <b-button
                   variant="primary"
                   block
-                  to="/bem-vindo?regiao=Centro-este"
+                  to="/bem-vindo?regiao=Centro-oeste"
                 >
                   Centro-oeste
                 </b-button>

@@ -12,7 +12,7 @@
     <div v-if="phase" class="moon" @click="show_moon_info = !show_moon_info">
       <div class="earth" :style="moonStyle"></div>
     </div>
-    <b-container v-if="show_moon_info">
+    <b-container v-if="show_moon_info || $route.path === '/bem-vindo'">
       <div v-if="moon_phase === 'nova'" class="item item-body text-center">
         <h3>Hoje é dia de Lua nova</h3>
         <small v-if="next_moon > 1">
