@@ -29,12 +29,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/global-mixin',
-    '~/plugins/vue-moment',
-    '~/plugins/vue2-filters',
-    '~/plugins/vee-validate',
     { src: '~/plugins/vue-notification', ssr: false },
-    { src: '~/plugins/vue-the-mask', ssr: false },
-    { src: '~/plugins/v-money', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
