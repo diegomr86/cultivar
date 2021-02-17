@@ -24,6 +24,10 @@ export default {
       type: String,
       default: '',
     },
+    description: {
+      type: String,
+      default: '',
+    },
   },
   head() {
     const links = this.links || []
@@ -39,7 +43,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'My custom description',
+          content: this.description || process.env.npm_package_description,
         },
       ],
     }
