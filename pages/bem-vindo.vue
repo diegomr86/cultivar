@@ -42,7 +42,11 @@
         Cuidados com a Horta
       </b-button>
       <br />
-      <b-button block variant="primary" to="/sobre"> Sobre </b-button>
+      <b-button block variant="primary" to="/sobre">
+        Sobre a plataforma</b-button
+      >
+      <br />
+      <b-button block variant="primary" to="/colabore"> Colabore </b-button>
     </b-container>
   </div>
 </template>

@@ -8,6 +8,10 @@
         </b-col>
         <b-col class="main bg-white pb-4">
           <Nuxt />
+          <div class="d-md-none text-center mobile-footer">
+            <hr />
+            <Footer />
+          </div>
         </b-col>
       </b-row>
     </div>
