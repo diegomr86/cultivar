@@ -92,6 +92,10 @@ export default {
       name: 'Cultivar! Brasil',
       short_name: 'Cultivar!',
     },
+    meta: {
+      ogHost: process.env.BASE_URL,
+      ogImage: '/cultivar-cover.png',
+    },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
