@@ -40,7 +40,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
-    // '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -96,6 +97,9 @@ export default {
       ogHost: process.env.BASE_URL,
       ogImage: '/cultivar-cover.png',
     },
+    workbox: {
+      offlineAnalytics: true,
+    },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -125,6 +129,9 @@ export default {
       },
     },
     scope: 'role',
+  },
+  googleAnalytics: {
+    id: 'UA-190127946-1',
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
