@@ -51,11 +51,11 @@ export default {
       'nuxt-twa-module',
       {
         /* module options */
-        defaultUrl: 'https://cultivar.terrakrya.com',
-        hostName: 'cultivar.terrakrya.com',
+        defaultUrl: 'https://www.cultivarbrasil.com',
+        hostName: 'www.cultivarbrasil.com',
         applicationId: 'com.ionicframework.plantai563575',
         launcherName: 'Cultivar!',
-        versionCode: 4,
+        versionCode: 5,
         versionName: process.env.npm_package_version,
         statusBarColor: '#009d6b',
         // The sha256Fingerprints by is an array with one SHA-256 key string.

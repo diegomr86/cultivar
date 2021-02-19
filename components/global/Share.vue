@@ -3,7 +3,7 @@
     <!-- Sharingbutton Facebook -->
     <a
       class="resp-sharing-button__link"
-      href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcultivar.terrakrya.com"
+      href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cultivarbrasil.com"
       target="_blank"
       rel="noopener"
       aria-label="Facebook"
@@ -31,7 +31,7 @@
     <!-- Sharingbutton Twitter -->
     <a
       class="resp-sharing-button__link"
-      href="https://twitter.com/intent/tweet/?text=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;url=https%3A%2F%2Fcultivar.terrakrya.com"
+      href="https://twitter.com/intent/tweet/?text=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;url=https%3A%2F%2Fwww.cultivarbrasil.com"
       target="_blank"
       rel="noopener"
       aria-label="Twitter"
@@ -59,7 +59,7 @@
     <!-- Sharingbutton LinkedIn -->
     <a
       class="resp-sharing-button__link"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fcultivar.terrakrya.com&amp;title=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;summary=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;source=https%3A%2F%2Fcultivar.terrakrya.com"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.cultivarbrasil.com&amp;title=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;summary=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;source=https%3A%2F%2Fwww.cultivarbrasil.com"
       target="_blank"
       rel="noopener"
       aria-label="LinkedIn"
@@ -96,7 +96,7 @@
     <!-- Sharingbutton WhatsApp -->
     <a
       class="resp-sharing-button__link"
-      href="whatsapp://send?text=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.%20https%3A%2F%2Fcultivar.terrakrya.com"
+      href="whatsapp://send?text=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.%20https%3A%2F%2Fwww.cultivarbrasil.com"
       target="_blank"
       rel="noopener"
       aria-label="WhatsApp"
@@ -129,7 +129,7 @@
     <!-- Sharingbutton Telegram -->
     <a
       class="resp-sharing-button__link"
-      href="https://telegram.me/share/url?text=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;url=https%3A%2F%2Fcultivar.terrakrya.com"
+      href="https://telegram.me/share/url?text=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;url=https%3A%2F%2Fwww.cultivarbrasil.com"
       target="_blank"
       rel="noopener"
       aria-label="Telegram"
@@ -158,7 +158,7 @@
     <!-- Sharingbutton E-Mail -->
     <a
       class="resp-sharing-button__link"
-      href="mailto:?subject=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;body=https%3A%2F%2Fcultivar.terrakrya.com"
+      href="mailto:?subject=Cultivar!%20%C3%A9%20um%20site%2Faplicativo%20em%20portugu%C3%AAs%20focado%20no%20Brasil%20com%20o%20objetivo%20de%20fortalecer%20a%20independ%C3%AAncia%20alimentar%20atrav%C3%A9s%20do%20aprendizado%20colaborativo%20e%20ferramentas%20que%20ajudam%20no%20cultivo.&amp;body=https%3A%2F%2Fwww.cultivarbrasil.com"
       target="_self"
       rel="noopener"
       aria-label="E-Mail"
