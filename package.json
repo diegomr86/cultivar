@@ -6,7 +6,7 @@
     "url": "https://diegomr86.github.io"
   },
   "description": "Site/aplicativo em português focado no Brasil com o objetivo de fortalecer a independência alimentar através do aprendizado coletivo e ferramentas que ajudam no cultivo",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",

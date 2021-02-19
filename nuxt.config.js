@@ -55,7 +55,7 @@ export default {
         hostName: 'www.cultivarbrasil.com',
         applicationId: 'com.ionicframework.plantai563575',
         launcherName: 'Cultivar!',
-        versionCode: 5,
+        versionCode: 6,
         versionName: process.env.npm_package_version,
         statusBarColor: '#009d6b',
         // The sha256Fingerprints by is an array with one SHA-256 key string.
