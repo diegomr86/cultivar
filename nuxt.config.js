@@ -100,6 +100,13 @@ export default {
     workbox: {
       offlineAnalytics: true,
       offlineStrategy: 'StaleWhileRevalidate',
+      runtimeCaching: [
+        {
+          // You can use a RegExp as the pattern:
+          urlPattern: 'https://kit.fontawesome.com/.*',
+          handler: 'StaleWhileRevalidate',
+        },
+      ],
     },
   },
 
