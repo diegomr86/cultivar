@@ -99,6 +99,7 @@ export default {
     },
     workbox: {
       offlineAnalytics: true,
+      offlineStrategy: 'StaleWhileRevalidate',
     },
   },
 
