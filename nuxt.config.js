@@ -100,11 +100,6 @@ export default {
     workbox: {
       offlineAnalytics: true,
       offlineStrategy: 'StaleWhileRevalidate',
-      precacheAndRoute: [
-        { url: '/ferramentas', revision: null },
-        { url: '/sobre', revision: null },
-        { url: '/colabore', revision: null },
-      ],
     },
   },
 
