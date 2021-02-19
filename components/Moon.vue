@@ -110,10 +110,26 @@ export default {
     moonStyle() {
       if (this.phase) {
         const phase = this.phase.phase * 100
+        let curve = 50 - this.phase.illuminated * 100
+        if (curve < 0) {
+          curve = 0
+        }
         if (phase < 50) {
-          return 'margin-left: ' + this.phase.illuminated * 100 * -1 + '%'
+          return (
+            'margin-left: ' +
+            this.phase.illuminated * 100 * -1 +
+            '%; border-radius: ' +
+            curve +
+            '%;'
+          )
         } else {
-          return 'margin-left: ' + this.phase.illuminated * 100 + '%'
+          return (
+            'margin-left: ' +
+            this.phase.illuminated * 100 +
+            '%; border-radius: ' +
+            curve +
+            '%;'
+          )
         }
       }
       return ''
