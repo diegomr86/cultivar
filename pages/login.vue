@@ -17,31 +17,31 @@
                 <b-button
                   variant="primary"
                   block
-                  to="/bem-vindo?regiao=Centro-oeste"
+                  to="/?regiao=Centro-oeste"
                 >
                   Centro-oeste
                 </b-button>
                 <b-button
                   variant="primary"
                   block
-                  to="/bem-vindo?regiao=Nordeste"
+                  to="/?regiao=Nordeste"
                 >
                   Nordeste
                 </b-button>
-                <b-button variant="primary" block to="/bem-vindo?regiao=Norte">
+                <b-button variant="primary" block to="/?regiao=Norte">
                   Norte
                 </b-button>
                 <b-button
                   variant="primary"
                   block
-                  to="/bem-vindo?regiao=Sudeste"
+                  to="/?regiao=Sudeste"
                 >
                   Sudeste
                 </b-button>
-                <b-button variant="primary" block to="/bem-vindo?regiao=Sul">
+                <b-button variant="primary" block to="/?regiao=Sul">
                   Sul
                 </b-button>
-                <b-button variant="primary" block to="/bem-vindo?regiao=">
+                <b-button variant="primary" block to="/?regiao=">
                   Brasil todo
                 </b-button>
               </div>
@@ -110,7 +110,7 @@ export default {
           this.currentError = error.response.data
         })
       if (resp) {
-        this.$router.push(this.$route.query.redirect || '/bem-vindo')
+        this.$router.push(this.$route.query.redirect || '/')
       }
       this.isLoading = false
     },

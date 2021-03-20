@@ -5,7 +5,7 @@
     </div>
     <b-container
       v-if="
-        show_moon_info || $route.path === '/' || $route.path === '/bem-vindo'
+        show_moon_info || $route.path === '/' || $route.path === '/'
       "
     >
       <div v-if="moon_phase === 'nova'" class="item item-body text-center">

@@ -7,12 +7,13 @@
     <b-container fluid class="guide">
       <div class="cap-2">
         <div class="item item-body" padding>
+          <h2 class="text-center title">PLANEJANDO O CULTIVO</h2>
           <div class="list">
             <br />
-            <h2 class="text-center">
+            <h4>
               <img src="~assets/img/guide/guia-ambiente-1.jpg" />
               TAMANHO
-            </h2>
+            </h4>
             <br />
             <p>
               você pretende plantar em canteiros, em vasos ou utilizar materiais
@@ -22,10 +23,10 @@
               ganhar mais confiança e conhecimento.
             </p>
             <br />
-            <h2 class="text-center">
+            <h4>
               <img src="~assets/img/guide/guia-ambiente-2.jpg" />
               ACESSO
-            </h2>
+            </h4>
             <br />
             <p>
               Dê preferência à escolha de um local de fácil acesso e protegido
@@ -34,9 +35,7 @@
               de trazer vida e ressignificar os espaços.
             </p>
             <br />
-            <h2 class="text-center">
-              <img src="~assets/img/guide/guia-ambiente-3.jpg" /> LUZ
-            </h2>
+            <h4><img src="~assets/img/guide/guia-ambiente-3.jpg" /> LUZ</h4>
             <br />
 
             <p>
@@ -46,9 +45,7 @@
             </p>
             <br />
 
-            <h2 class="text-center">
-              <img src="~assets/img/guide/guia-ambiente-4.jpg" /> ÁGUA
-            </h2>
+            <h4><img src="~assets/img/guide/guia-ambiente-4.jpg" /> ÁGUA</h4>
             <br />
             <p>
               Repare na umidade do local escolhido. Prefira locais com uma fonte
@@ -57,9 +54,7 @@
             </p>
             <br />
 
-            <h2 class="text-center">
-              <img src="~assets/img/guide/guia-ambiente-5.jpg" /> VENTO
-            </h2>
+            <h4><img src="~assets/img/guide/guia-ambiente-5.jpg" /> VENTO</h4>
             <br />
             <p>
               Repare na direção e na força do vento. Ele te indicará, entre
@@ -73,7 +68,7 @@
             <br />
           </div>
           <div class="box">
-            <h3 class="text-center title">OUTROS ELEMENTOS</h3>
+            <h4 class="text-center title">OUTROS ELEMENTOS</h4>
             Preste atenção nas outras plantas e seres já presentes no local.
             Você reconhece as outras espécies? Parecem fortes? Felizes? Fazem
             sombra? Repare em como elas interagem com este ambiente. Existem
@@ -83,14 +78,14 @@
           </div>
           <br />
           <br />
-          <h2 class="text-center title">MATERIAIS</h2>
+          <h3 class="text-center title">MATERIAIS</h3>
           <br />
 
           <p>
             Comece a montagem separando os materiais que você irá utilizar.
             Materiais necessários:
           </p>
-          <ol>
+          <ul>
             <li>
               <h4>Recipientes</h4>
               <p>
@@ -119,7 +114,7 @@
                 a terra: pá, colheres, regador, etc.
               </p>
             </li>
-          </ol>
+          </ul>
           <div class="tip">
             <h3 class="text-center title">DICA</h3>
             <p>
@@ -133,7 +128,7 @@
             </p>
           </div>
           <br />
-          <h2 class="text-center title">RECIPIENTES</h2>
+          <h3 class="text-center title">RECIPIENTES</h3>
           <br />
 
           <p>
@@ -153,6 +148,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-recipientes.png" />
           </div>
+          <br />
           <div class="tip">
             <h3 class="text-center title">DICAS</h3>
             <p>
@@ -169,7 +165,7 @@
             </p>
           </div>
           <br />
-          <h2 class="text-center title">O SOLO</h2>
+          <h3 class="text-center title">O SOLO</h3>
           <p>
             Você vai precisar recriar a estrutura do solo no recipiente que
             escolheu para plantar.
@@ -177,7 +173,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-o-solo-1.png" />
           </div>
-
+          <br />
           <div>
             <h4>01. MATÉRIA ORGÂNICA</h4>
             <p>
@@ -233,6 +229,10 @@
           </div>
         </div>
       </div>
+      <CultivationGuideRef />
+      <b-button block variant="primary" to="/guia-de-cultivo/quando-plantar">
+        Quando plantar?
+      </b-button>
     </b-container>
   </div>
 </template>

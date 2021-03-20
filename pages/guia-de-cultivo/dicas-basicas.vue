@@ -12,6 +12,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-o-plantio-organico.png" />
           </div>
+          <br />
           <p>
             Quando se fala em alimentos orgânicos, a primeira coisa que nos vem
             a cabeça é “alimentos cultivados sem o uso de agrotóxicos” ou
@@ -44,9 +45,9 @@
             sempre o aproveitamento dos recursos do próprio sistema, a
             preservação ambiental e a qualidade da vida humana.
           </p>
-          <h2 class="text-center title">
+          <h4 class="text-center title">
             COMO PLANTAR E CUIDAR DE UMA HORTA NA CIDADE
-          </h2>
+          </h4>
           <p>
             São muitos os motivos para iniciar o plantio de uma horta na cidade.
             No atual contexto urbano, nos acostumamos a ter acesso a todo tipo
@@ -84,10 +85,59 @@
               Filosofia prática que busca desenvolver métodos de permanência
               saudável, justa e ecológica de uma comunidade em um ambiente.
             </p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/ZFxy_0fmUDU"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <br />
             <h4>AGROECOLOGIA</h4>
             <p>
               A ciência que busca uma agricultura sustentável, integrando
               conhecimentos de outras áreas, inclusive a sabedoria popular.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/SBTfltlCv-U"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <br />
+            <h4>AGROFLORESTA</h4>
+            <p>
+              É um sistema produtivo que concilia a produção de alimentos com a
+              recuperação de áreas degradadas, promovendo benefícios econômicos
+              e ecológicos. Tudo isso com o objetivo de construir um novo
+              paradigma produtivo que não se baseia somente na monocultura, como
+              ocorre hoje.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/0D2iu6YSFuI"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <br />
+            <p>
+              <a
+                class="btn btn-primary"
+                href="https://www.redeagroflorestal.com.br"
+                target="_blank"
+                >Conheça a Rede Agroflorestal</a
+              >
             </p>
             <h4>BIODINÂMICA</h4>
             <p>
@@ -95,15 +145,27 @@
               maneira diferente e profunda de entender a vida e as relações
               entre os elementos naturais, os astros e o cosmos.
             </p>
-            <h4>NUTRACÊUTICA</h4>
-            <p>
-              Que vem da união entre ‘nutrição’ e ‘farmacêutica’ e propõe uma
-              grande investigação das plantas e seus componentes fitoquímicos em
-              benefício da saúde humana.
-            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/Wb3K76IFfWM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
+      <CultivationGuideRef />
+      <b-button
+        block
+        variant="primary"
+        to="/guia-de-cultivo/planejamento-da-horta"
+      >
+        Saiba como planejar seu cultivo
+      </b-button>
     </b-container>
   </div>
 </template>

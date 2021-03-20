@@ -40,6 +40,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-lua-nova.png" />
           </div>
+          <br />
           <p>
             Nesta fase, ela começa exercer influência sobre a Terra, a seiva
             (sangue da planta) manifesta-se em maior quantidade no caule, em
@@ -58,6 +59,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-lua-crescente.png" />
           </div>
+          <br />
           <p>
             Fase em que a lua exerce influência muito boa sobre as plantas,
             nessa fase a seiva está presente em maior quantidade no caule, nos
@@ -79,6 +81,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-lua-cheia.png" />
           </div>
+          <br />
           <p>
             Fase em que a influência sobre a terra chega ao ponto máximo, mas só
             nos primeiros dias, porque depois ela começa já mingar. No início
@@ -92,6 +95,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-lua-minguante.png" />
           </div>
+          <br />
           <p>
             Nesta fase é pouca a influência da lua sobre a terra. É provável que
             esta força seja insignificante.A energia ou força contida na terra
@@ -226,12 +230,9 @@
             plantar este mês na sua região e escolha as que melhor se adaptam às
             suas possibilidades. Para acessar clique no link abaixo:
           </p>
-          <b-button
-            block
-            variant="primary"
-            to="/ferramentas/o-que-plantar-esse-mes"
-          >
-            O que plantar esse mês?
+          <CultivationGuideRef />
+          <b-button block variant="primary" to="/guia-de-cultivo/como-plantar">
+            Como plantar?
           </b-button>
         </div>
       </div>

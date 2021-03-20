@@ -45,7 +45,8 @@
               sistemas caseiros de irrigação de hortas domésticas na internet.
             </p>
           </div>
-          <h2 class="text-center title">PODAS</h2>
+          <br />
+          <h3 class="text-center title">PODAS</h3>
           <p>
             Cortar as folhas secas, doentes ou machucadas deve ser um processo
             constante para que não a planta não desperdice de energia, água e
@@ -67,7 +68,8 @@
               próprio curso e obteve resultados impressionantes.
             </p>
           </div>
-          <h2 class="text-center title">ADUBAÇÃO</h2>
+          <br />
+          <h3 class="text-center title">ADUBAÇÃO</h3>
           <p>
             Quando plantamos em recipientes isolados (vasos, canteiros), o
             desenvolver das plantas acaba por esgotar os nutrientes presentes no
@@ -92,7 +94,8 @@
               solo em contato com as raízes.
             </p>
           </div>
-          <h2 class="text-center title">MÉTODOS DE COLHEITA</h2>
+          <br />
+          <h3 class="text-center title">MÉTODOS DE COLHEITA</h3>
           <p>
             A colheita é um momento de suma importância em uma horta, ajuda a
             renovar as folhas e traz mais vigor às plantas. Mas é interessante
@@ -110,7 +113,8 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-colheita.png" />
           </div>
-          <h2 class="text-center title">PRAGAS E DOENÇAS (BIOINDICADORES)</h2>
+          <br />
+          <h3 class="text-center title">PRAGAS E DOENÇAS (BIOINDICADORES)</h3>
           <p>
             Para a abordagem orgânica de agricultura, o surgimento de uma
             “praga” ou “doença” é visto como um bioindicador, pois aponta para
@@ -130,6 +134,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-pragas-e-doencas-1.png" />
           </div>
+          <br />
           <p>
             Outras estratégias também podem ser utilizadas com bastante êxito e
             sem agressividade. Plantas aromáticas, por exemplo, são muito
@@ -144,6 +149,7 @@
           <div class="img-wrapper">
             <img src="~assets/img/guide/guia-pragas-e-doencas-2.png" />
           </div>
+          <br />
           <div class="tip">
             <h3 class="text-center title">DICA</h3>
             <p>
@@ -154,13 +160,22 @@
               pimenta e o preparado de sabão.
             </p>
           </div>
-          <h2 class="text-center title">MÃOS NA MASSA!</h2>
+          <br />
+          <h3 class="text-center title">MÃOS NA MASSA!</h3>
           <p>
             Agora que você já é um expert no cultivo de hortaliças está na hora
             de por a mão na massa e bombar sua hortinha! Boas colheitas!
           </p>
         </div>
       </div>
+      <CultivationGuideRef />
+      <b-button
+        block
+        variant="primary"
+        to="/ferramentas/o-que-plantar-esse-mes"
+      >
+        Veja o que plantar esse mês
+      </b-button>
     </b-container>
   </div>
 </template>

@@ -6,7 +6,7 @@
         <b-col md="3" fluid class="sidebar-wrapper d-none d-md-block">
           <Sidebar />
         </b-col>
-        <b-col class="main bg-white pb-4">
+        <b-col md="9" class="main bg-white pb-4">
           <Nuxt />
           <div class="d-md-none text-center mobile-footer">
             <hr />
@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-import Sidebar from '@/components/Sidebar'
+import Navbar from '@/components/Navbar.vue'
+import Sidebar from '@/components/Sidebar.vue'
 
 export default {
   components: {

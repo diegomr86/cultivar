@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="md">
-    <b-navbar-brand to="/bem-vindo">
+    <b-navbar-brand to="/">
       <img src="~/assets/img/logo.png" class="logo" />
       <strong>Cultivar!</strong> Brasil
     </b-navbar-brand>
