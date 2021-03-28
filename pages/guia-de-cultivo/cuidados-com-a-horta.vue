@@ -24,16 +24,16 @@
             a água gelada provoque um choque térmico nas plantas.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rega-1.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rega-1.png" />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rega-2.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rega-2.png" />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rega-3.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rega-3.png" />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rega-4.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rega-4.png" />
           </div>
           <div class="tip">
             <h3 class="text-center title">DICA</h3>
@@ -111,7 +111,7 @@
             das brotações.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-colheita.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-colheita.png" />
           </div>
           <br />
           <h3 class="text-center title">PRAGAS E DOENÇAS (BIOINDICADORES)</h3>
@@ -132,7 +132,9 @@
             profundas onde transformarão-se em húmus.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-pragas-e-doencas-1.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-pragas-e-doencas-1.png"
+            />
           </div>
           <br />
           <p>
@@ -147,7 +149,9 @@
             orgânicos.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-pragas-e-doencas-2.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-pragas-e-doencas-2.png"
+            />
           </div>
           <br />
           <div class="tip">

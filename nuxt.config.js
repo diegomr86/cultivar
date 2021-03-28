@@ -29,6 +29,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/global-mixin',
+    '~/plugins/persisted-state.js',
     { src: '~/plugins/vue-notification', ssr: false },
   ],
 

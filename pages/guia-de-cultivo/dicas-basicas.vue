@@ -10,7 +10,9 @@
           <h2 class="text-center title">O PLANTIO ORGÂNICO</h2>
           <br />
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-o-plantio-organico.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-o-plantio-organico.png"
+            />
           </div>
           <br />
           <p>

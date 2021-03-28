@@ -1,7 +1,19 @@
 <template>
   <div>
-    <breadcrumb active="Guia de cultivo" />
-    <b-container fluid>
+    <breadcrumb active="Guia básico de cultivo em casa" />
+    <b-container fluid class="guide">
+      <div class="img-wrapper">
+        <img src="~assets/img/guia-de-cultivo/guia-de-cultivo.png" />
+      </div>
+      <br />
+      <p class="text-center">
+        Pra cultivar plantas e alimentos saudáveis é preciso oferecer atenção,
+        cuidado e dedicação, mas os benefícios que essa prática trará pra sua
+        saúde física, mental, emocional e psicológica são muitos.
+      </p>
+      <p class="text-center">
+        A seguir você encontra informações importantes pra saber como começar!
+      </p>
       <b-button block variant="primary" to="/guia-de-cultivo/dicas-basicas">
         Dicas básicas
       </b-button>

@@ -11,7 +11,7 @@
           <div class="list">
             <br />
             <h4>
-              <img src="~assets/img/guide/guia-ambiente-1.jpg" />
+              <img src="~assets/img/guia-de-cultivo/guia-ambiente-1.jpg" />
               TAMANHO
             </h4>
             <br />
@@ -24,7 +24,7 @@
             </p>
             <br />
             <h4>
-              <img src="~assets/img/guide/guia-ambiente-2.jpg" />
+              <img src="~assets/img/guia-de-cultivo/guia-ambiente-2.jpg" />
               ACESSO
             </h4>
             <br />
@@ -35,7 +35,9 @@
               de trazer vida e ressignificar os espaços.
             </p>
             <br />
-            <h4><img src="~assets/img/guide/guia-ambiente-3.jpg" /> LUZ</h4>
+            <h4>
+              <img src="~assets/img/guia-de-cultivo/guia-ambiente-3.jpg" /> LUZ
+            </h4>
             <br />
 
             <p>
@@ -45,7 +47,9 @@
             </p>
             <br />
 
-            <h4><img src="~assets/img/guide/guia-ambiente-4.jpg" /> ÁGUA</h4>
+            <h4>
+              <img src="~assets/img/guia-de-cultivo/guia-ambiente-4.jpg" /> ÁGUA
+            </h4>
             <br />
             <p>
               Repare na umidade do local escolhido. Prefira locais com uma fonte
@@ -54,7 +58,10 @@
             </p>
             <br />
 
-            <h4><img src="~assets/img/guide/guia-ambiente-5.jpg" /> VENTO</h4>
+            <h4>
+              <img src="~assets/img/guia-de-cultivo/guia-ambiente-5.jpg" />
+              VENTO
+            </h4>
             <br />
             <p>
               Repare na direção e na força do vento. Ele te indicará, entre
@@ -146,7 +153,7 @@
             inspirar e colher idéias. Mas, principalmente, use sua imaginação.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-recipientes.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-recipientes.png" />
           </div>
           <br />
           <div class="tip">
@@ -171,7 +178,7 @@
             escolheu para plantar.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-o-solo-1.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-o-solo-1.png" />
           </div>
           <br />
           <div>
@@ -225,7 +232,7 @@
             </p>
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-o-solo-2.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-o-solo-2.png" />
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@
             de maneira saudável.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-sol.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-sol.png" />
           </div>
           <h1 class="text-center title">A LUA</h1>
           <p>
@@ -38,7 +38,7 @@
             uma planta para outro vaso.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-lua-nova.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-lua-nova.png" />
           </div>
           <br />
           <p>
@@ -57,7 +57,7 @@
             madeira.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-lua-crescente.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-lua-crescente.png" />
           </div>
           <br />
           <p>
@@ -79,7 +79,7 @@
             probabilidade de ataque de pragas.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-lua-cheia.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-lua-cheia.png" />
           </div>
           <br />
           <p>
@@ -93,7 +93,7 @@
             planta (ramos e folhas).
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-lua-minguante.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-lua-minguante.png" />
           </div>
           <br />
           <p>
@@ -205,7 +205,9 @@
             pergunta:
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-olhando-para-dentro.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-olhando-para-dentro.png"
+            />
           </div>
           <div class="tip">
             <h3 class="text-center title">DICA</h3>

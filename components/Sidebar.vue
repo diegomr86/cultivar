@@ -14,25 +14,12 @@
       </b-nav>
     </b-list-group-item>
     <b-list-group-item>
-      <i class="fas fa-book-reader" /> Guia de cultivo
+      <i class="fas fa-book-reader" /> Guias
     </b-list-group-item>
     <b-list-group-item class="submenu">
       <b-nav vertical>
-        <b-nav-item to="/guia-de-cultivo/dicas-basicas">
-          Dicas básicas
-        </b-nav-item>
-        <b-nav-item to="/guia-de-cultivo/planejamento-da-horta">
-          Planejamento da Horta
-        </b-nav-item>
-        <b-nav-item to="/guia-de-cultivo/quando-plantar">
-          Quando plantar
-        </b-nav-item>
-        <b-nav-item to="/guia-de-cultivo/como-plantar">
-          Como plantar
-        </b-nav-item>
-        <b-nav-item to="/guia-de-cultivo/cuidados-com-a-horta">
-          Cuidados com a Horta
-        </b-nav-item>
+        <b-nav-item to="/guia-de-cultivo"> Guia de cultivo </b-nav-item>
+        <b-nav-item to="/guia-de-compostagem"> Guia de compostagem </b-nav-item>
       </b-nav>
     </b-list-group-item>
     <b-list-group-item class="d-md-none">

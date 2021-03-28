@@ -11,27 +11,27 @@
           <p>
             Há várias maneiras de você iniciar sua horta. Você pode começar por:
           </p>
-          <h3>Semente</h3>
-          <p><strong>Óvulo fecundado</strong></p>
+          <h3 class="text-center">Semente</h3>
+          <p class="text-center"><strong>Óvulo fecundado</strong></p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantar-semente.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-plantar-semente.png" />
           </div>
           <br />
-          <h3>Parte de uma planta mãe</h3>
-          <p><strong>Estaca</strong></p>
+          <h3 class="text-center">Parte de uma planta mãe</h3>
+          <p class="text-center"><strong>Estaca</strong></p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantar-mae-1.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-plantar-mae-1.png" />
           </div>
           <br />
-          <p><strong>Touceira</strong></p>
+          <p class="text-center"><strong>Touceira</strong></p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantar-mae-2.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-plantar-mae-2.png" />
           </div>
           <br />
-          <h3>Muda</h3>
-          <p><strong>Planta já desenvolvida</strong></p>
+          <h3 class="text-center">Muda</h3>
+          <p class="text-center"><strong>Planta já desenvolvida</strong></p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantar-muda.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-plantar-muda.png" />
           </div>
           <br />
           <h2 class="text-center title">SEMENTE</h2>
@@ -43,7 +43,7 @@
             local definitivo.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-semente-1.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-semente-1.png" />
           </div>
           <br />
           <p>
@@ -53,7 +53,7 @@
             acumular água.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-semente-2.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-semente-2.png" />
           </div>
           <br />
           <p>
@@ -63,7 +63,7 @@
             consumir.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-semente-3.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-semente-3.png" />
           </div>
           <br />
           <p>
@@ -95,7 +95,7 @@
             vaso, tornando-se uma mudinha.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-estaca.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-estaca.png" />
           </div>
           <br />
           <div class="tip">
@@ -116,12 +116,12 @@
           </p>
           <p>Retire a terra ao redor das raízes</p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-touceiras-1.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-touceiras-1.png" />
           </div>
           <br />
           <p>Faça um corte preciso separando o novo broto da planta mãe</p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-touceiras-2.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-touceiras-2.png" />
           </div>
           <br />
           <p>
@@ -129,12 +129,12 @@
             reduzir a área de evaporação
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-touceiras-3.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-touceiras-3.png" />
           </div>
           <br />
           <p>Enterre o novo broto em terra fofa e rica em matéria orgânica.</p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-touceiras-4.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-touceiras-4.png" />
           </div>
           <br />
           <h2 class="text-center title">REBROTA</h2>
@@ -163,7 +163,7 @@
             </li>
           </ol>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rebrota-alface.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rebrota-alface.png" />
           </div>
           <br />
           <h3>Gengibre</h3>
@@ -183,7 +183,7 @@
             </li>
           </ol>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rebrota-gengibre.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rebrota-gengibre.png" />
           </div>
           <br />
           <h3>Cebola</h3>
@@ -202,7 +202,7 @@
             </li>
           </ol>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rebrota-cebola.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rebrota-cebola.png" />
           </div>
           <br />
           <h3>Alho</h3>
@@ -218,7 +218,7 @@
             </li>
           </ol>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rebrota-alho.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rebrota-alho.png" />
           </div>
           <br />
           <h3>Batata doce</h3>
@@ -240,7 +240,9 @@
             </li>
           </ol>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rebrota-batata-doce.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-rebrota-batata-doce.png"
+            />
           </div>
           <br />
           <h3>Abacaxi</h3>
@@ -259,7 +261,7 @@
             </li>
           </ol>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-rebrota-abacaxi.png" />
+            <img src="~assets/img/guia-de-cultivo/guia-rebrota-abacaxi.png" />
           </div>
           <br />
           <h2 class="text-center title">COMBINANDO PLANTAS</h2>
@@ -281,34 +283,52 @@
             com o processo.
           </p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-combinando-plantas.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-combinando-plantas.png"
+            />
           </div>
           <br />
           <h2 class="text-center title">PLANTAS COMPANHEIRAS</h2>
           <p>Confira abaixo algumas plantas que gostam de ficar próximas</p>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-1.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-1.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-2.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-2.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-3.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-3.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-4.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-4.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-5.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-5.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-6.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-6.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-7.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-7.png"
+            />
           </div>
           <div class="img-wrapper">
-            <img src="~assets/img/guide/guia-plantas-companheiras-8.png" />
+            <img
+              src="~assets/img/guia-de-cultivo/guia-plantas-companheiras-8.png"
+            />
           </div>
         </div>
       </div>
