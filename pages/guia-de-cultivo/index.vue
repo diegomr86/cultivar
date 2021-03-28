@@ -3,6 +3,10 @@
     <breadcrumb
       active="Guia básico de cultivo"
       description="Pra cultivar plantas e alimentos saudáveis é preciso oferecer atenção, cuidado e dedicação, mas os benefícios que essa prática trará pra sua saúde física, mental, emocional e psicológica são muitos."
+      :img="
+        'https://www.cultivarbrasil.com' +
+        require('~/assets/img/guia-de-cultivo/guia-de-cultivo.png')
+      "
     />
     <b-container fluid class="guide">
       <div class="img-wrapper">

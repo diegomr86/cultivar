@@ -3,6 +3,10 @@
     <breadcrumb
       active="Guia de compostagem"
       description="A partir de agora, os resíduos orgânicos produzidos pela sua família serão reciclados na sua própria casa."
+      :img="
+        'https://www.cultivarbrasil.com' +
+        require('~/assets/img/guia-de-compostagem/ciclo-texto.png')
+      "
     />
     <b-container fluid class="guide">
       <div class="cap-1">

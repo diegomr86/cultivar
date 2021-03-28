@@ -51,6 +51,11 @@ export default {
         name: 'og:title',
         content: this.pageTitle(),
       },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://www.cultivarbrasil.com' + this.$route.path,
+      },
     ]
     if (this.img) {
       meta.push({
