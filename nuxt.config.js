@@ -3,7 +3,7 @@ export default {
   ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Cultivar!',
+    title: 'Cultivar',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -56,7 +56,7 @@ export default {
         defaultUrl: 'https://www.cultivarbrasil.com',
         hostName: 'www.cultivarbrasil.com',
         applicationId: 'com.ionicframework.plantai563575',
-        launcherName: 'Cultivar!',
+        launcherName: 'Cultivar',
         versionCode: 6,
         versionName: process.env.npm_package_version,
         statusBarColor: '#009d6b',
@@ -91,8 +91,8 @@ export default {
   pwa: {
     manifest: {
       lang: 'pt-BR',
-      name: 'Cultivar! Brasil',
-      short_name: 'Cultivar!',
+      name: 'Cultivar Brasil',
+      short_name: 'Cultivar',
     },
     meta: {
       ogHost: process.env.BASE_URL,

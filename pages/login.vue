@@ -6,7 +6,7 @@
           <b-card class="bg-blue text-white">
             <b-card-body>
               <img src="~/assets/img/logo.png" class="logo" />
-              <h4 class="mb-4 text-white"><strong>Cultivar!</strong> Brasil</h4>
+              <h4 class="mb-4 text-white"><strong>Cultivar</strong> Brasil</h4>
               <p>
                 Seja bem vindo!<br /><small>
                   Para melhorar sua experiencia selecione sua região

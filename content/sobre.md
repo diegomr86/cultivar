@@ -2,17 +2,17 @@
 title: Sobre
 ---
 
-# Cultivar! Brasil
+# Cultivar Brasil
 
 Aplicativo brasileiro para **cultivo de Hortaliças**
 
 ## O PROJETO
 
-**Cultivar!** é um aplicativo para celular em português **focado no Brasil** que foi desenvolvido com o objetivo de **facilitar o aprendizado** das pessoas no que diz respeito a **independência alimentar** que é um dos grandes problemas da nossa civilização.
+**Cultivar** é um aplicativo para celular em português **focado no Brasil** que foi desenvolvido com o objetivo de **facilitar o aprendizado** das pessoas no que diz respeito a **independência alimentar** que é um dos grandes problemas da nossa civilização.
 
 A idéia é manter um guia de cultivo simples e direto para alinhamento dos conhecimentos básicos de cultivo e evoluir com o tempo ferramentas que facilitam a vida na hora do cultivo até gerar uma rede de **conhecimento colaborativo**.
 
-Com o **Cultivar!** o usuário vai aprender:
+Com o **Cultivar** o usuário vai aprender:
 
 - Cultivar de acordo com as **Fases da Lua** e do clima de cada região do Brasil
 - **O que plantar** em cada mês

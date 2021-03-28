@@ -2,7 +2,7 @@
   <b-navbar toggleable="md">
     <b-navbar-brand to="/">
       <img src="~/assets/img/logo.png" class="logo" />
-      <strong>Cultivar!</strong> Brasil
+      <strong>Cultivar</strong> Brasil
     </b-navbar-brand>
     <b-navbar-toggle target="sidebar"></b-navbar-toggle>
     <b-collapse id="sidebar" is-nav>

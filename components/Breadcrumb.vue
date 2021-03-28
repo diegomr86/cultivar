@@ -32,7 +32,7 @@ export default {
   head() {
     const links = this.links || []
     const title = [
-      'Cultivar! Brasil',
+      'Cultivar Brasil',
       ...links.map((link) => link[0]),
       this.active,
     ]

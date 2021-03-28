@@ -4,7 +4,7 @@ title: Colabore
 
 ## Colabore
 
-**Cultivar!** Brasil é um projeto de código aberto (open source), colaborativo e voluntário com o objetivo de levar conteúdo e ferramentas de qualidade e de graça para a maior quantidade de pessoas possível.
+**Cultivar** Brasil é um projeto de código aberto (open source), colaborativo e voluntário com o objetivo de levar conteúdo e ferramentas de qualidade e de graça para a maior quantidade de pessoas possível.
 
 A ideia nessa nova fase é lançar mensalmente melhorias e novas funcionalidades.
 
