@@ -721,6 +721,7 @@
               utilização dos recursos do planeta e, principalmente, para reduzir
               os danos que causamos ao meio ambiente.
             </p>
+            <CompostingGuideRef />
             <p>
               <strong>
                 Todos agradecemos sua atitude com a cidade e com o meio

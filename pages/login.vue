@@ -14,28 +14,16 @@
                 >
               </p>
               <div>
-                <b-button
-                  variant="primary"
-                  block
-                  to="/?regiao=Centro-oeste"
-                >
+                <b-button variant="primary" block to="/?regiao=Centro-oeste">
                   Centro-oeste
                 </b-button>
-                <b-button
-                  variant="primary"
-                  block
-                  to="/?regiao=Nordeste"
-                >
+                <b-button variant="primary" block to="/?regiao=Nordeste">
                   Nordeste
                 </b-button>
                 <b-button variant="primary" block to="/?regiao=Norte">
                   Norte
                 </b-button>
-                <b-button
-                  variant="primary"
-                  block
-                  to="/?regiao=Sudeste"
-                >
+                <b-button variant="primary" block to="/?regiao=Sudeste">
                   Sudeste
                 </b-button>
                 <b-button variant="primary" block to="/?regiao=Sul">

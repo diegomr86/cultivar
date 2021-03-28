@@ -1,9 +1,9 @@
 <template>
   <p class="mt-2">
     <small>
-      Fonte:
+      As informações deste guia são baseadas em:
       <a
-        href="https://compostasaopaulo.eco.br/compostasp_cartilha.pdf"
+        href="https://www.cultivarbrasil.com/docs/cartilha-para-plantio-de-pequenos-jardins-urbanos.pdf"
         target="_blank"
       >
         Cartilha para plantio de pequenos jardins urbanos - Composta São Paulo

@@ -4,9 +4,7 @@
       <div class="earth" :style="moonStyle"></div>
     </div>
     <b-container
-      v-if="
-        show_moon_info || $route.path === '/' || $route.path === '/'
-      "
+      v-if="show_moon_info || $route.path === '/' || $route.path === '/'"
     >
       <div v-if="moon_phase === 'nova'" class="item item-body text-center">
         <h3>Hoje é dia de Lua nova</h3>
