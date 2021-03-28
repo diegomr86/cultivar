@@ -3,6 +3,7 @@
     <breadcrumb
       :links="[['Guia de cultivo', '/guia-de-cultivo']]"
       active="Como plantar"
+      description="Veja dicas de como plantar suas plantinhas em casa"
     />
     <b-container fluid class="guide">
       <div class="cap-4">

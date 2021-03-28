@@ -1,6 +1,9 @@
 <template>
   <div>
-    <breadcrumb active="Guia de compostagem" />
+    <breadcrumb
+      active="Guia de compostagem"
+      description="A partir de agora, os resíduos orgânicos produzidos pela sua família serão reciclados na sua própria casa."
+    />
     <b-container fluid class="guide">
       <div class="cap-1">
         <div class="item item-body" padding>
@@ -749,3 +752,10 @@
     </b-container>
   </div>
 </template>
+<script>
+export default {
+  created() {
+    console.log(this.$metaInfo)
+  },
+}
+</script>

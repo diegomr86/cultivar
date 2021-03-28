@@ -1,6 +1,9 @@
 <template>
   <div>
-    <breadcrumb active="Ferramentas" />
+    <breadcrumb
+      active="Ferramentas"
+      description="Ferramentas que vão auxiliar no cuidado com os seus cultivos"
+    />
     <b-container fluid>
       <b-button
         block

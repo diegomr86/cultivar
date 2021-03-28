@@ -3,6 +3,7 @@
     <breadcrumb
       :links="[['Guia de cultivo', '/guia-de-cultivo']]"
       active="Planejamento da horta"
+      description="Aprenda a planejar melhor seus plantios"
     />
     <b-container fluid class="guide">
       <div class="cap-2">

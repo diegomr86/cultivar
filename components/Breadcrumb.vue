@@ -28,25 +28,54 @@ export default {
       type: String,
       default: '',
     },
+    img: {
+      type: String,
+      default: '',
+    },
   },
   head() {
-    const links = this.links || []
-    const title = [
-      'Cultivar Brasil',
-      ...links.map((link) => link[0]),
-      this.active,
+    const meta = [
+      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      {
+        hid: 'description',
+        name: 'description',
+        content: this.pageDescription(),
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: this.pageTitle(),
+      },
     ]
-    return {
-      title: title.reverse().join(' | '),
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.description || process.env.npm_package_description,
-        },
-      ],
+    if (this.img) {
+      meta.push({
+        hid: 'og:image',
+        name: 'og:image',
+        content: this.img,
+      })
     }
+    return {
+      title: this.pageTitle(),
+      meta,
+    }
+  },
+  created() {
+    this.$store.commit('setPageTitle', this.pageTitle())
+    this.$store.commit('setPageDescription', this.pageDescription())
+  },
+  methods: {
+    pageTitle() {
+      const links = this.links || []
+      const title = [
+        'Cultivar Brasil',
+        ...links.map((link) => link[0]),
+        this.active,
+      ]
+      return title.reverse().join(' | ')
+    },
+    pageDescription() {
+      return this.description || process.env.npm_package_description
+    },
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div v-if="content">
-    <breadcrumb :active="content.title" />
+    <breadcrumb :active="content.title" :description="content.description" />
     <b-container fluid>
       <nuxt-content :document="content" />
     </b-container>

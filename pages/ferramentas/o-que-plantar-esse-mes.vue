@@ -2,7 +2,8 @@
   <div>
     <breadcrumb
       :links="[['Ferramentas', '/ferramentas']]"
-      active="O que plantar esse mês?"
+      :active="'O que plantar em ' + currentMonth.name.toLowerCase()"
+      :description="currentMonth.description"
     />
     <b-container fluid>
       <div class="text-center">

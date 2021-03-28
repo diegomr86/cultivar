@@ -3,6 +3,7 @@
     <breadcrumb
       :links="[['Guia de cultivo', '/guia-de-cultivo']]"
       active="Cuidados com a Horta"
+      description="Confira os cuidados que você deve ter com sua hortinha"
     />
     <b-container fluid class="guide">
       <div class="cap-5">

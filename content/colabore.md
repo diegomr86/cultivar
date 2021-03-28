@@ -1,5 +1,6 @@
 ---
 title: Colabore
+description: Cultivar Brasil é um projeto de código aberto (open source), colaborativo e voluntário com o objetivo de levar conteúdo e ferramentas de qualidade e de graça para a maior quantidade de pessoas possível.
 ---
 
 ## Colabore

@@ -3,6 +3,7 @@
     <breadcrumb
       :links="[['Guia de cultivo', '/guia-de-cultivo']]"
       active="Quando plantar"
+      description="Saiba qual é a melhor hora para plantar seus cultivos"
     />
     <b-container fluid class="guide">
       <div class="cap-3">

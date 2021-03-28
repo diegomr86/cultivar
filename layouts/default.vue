@@ -8,7 +8,7 @@
         </b-col>
         <b-col md="9" class="main bg-white pb-4">
           <Nuxt />
-          <div class="d-md-none text-center mobile-footer">
+          <div class="text-center mobile-footer">
             <hr />
             <Footer />
           </div>

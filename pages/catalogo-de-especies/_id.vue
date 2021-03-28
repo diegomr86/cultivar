@@ -3,6 +3,11 @@
     <breadcrumb
       :links="[['Catálogo de espécies', '/catalogo-de-especies']]"
       :active="especie.nome"
+      :description="especie.descricao"
+      :img="
+        'https://www.cultivarbrasil.com' +
+        require('~/assets/img/plants/' + especie.slug + '.png')
+      "
     />
     <b-container fluid>
       <div class="item">
