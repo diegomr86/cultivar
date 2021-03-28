@@ -9,12 +9,10 @@
         <div class="item item-body" padding>
           <h2 class="text-center title">PLANEJANDO O CULTIVO</h2>
           <div class="list">
-            <br />
             <h4>
               <img src="~assets/img/guia-de-cultivo/guia-ambiente-1.jpg" />
               TAMANHO
             </h4>
-            <br />
             <p>
               você pretende plantar em canteiros, em vasos ou utilizar materiais
               reciclados como recipientes? Qual o a profundidade e a largura?
@@ -22,47 +20,39 @@
               interessante começar pequeno e crescer sua horta conforme você
               ganhar mais confiança e conhecimento.
             </p>
-            <br />
             <h4>
               <img src="~assets/img/guia-de-cultivo/guia-ambiente-2.jpg" />
               ACESSO
             </h4>
-            <br />
             <p>
               Dê preferência à escolha de um local de fácil acesso e protegido
               dos animais domésticos. Observe também o ambiente que você
               frequenta pouco em sua casa ou em sua rua - as plantas tem o poder
               de trazer vida e ressignificar os espaços.
             </p>
-            <br />
             <h4>
               <img src="~assets/img/guia-de-cultivo/guia-ambiente-3.jpg" /> LUZ
             </h4>
-            <br />
 
             <p>
               Identifique onde nasce o sol e quantas horas ele incide no local
               escolhido por dia. O sol bate pela manhã ou pela tarde? A luz é
               direta ou indireta? Como é a luz nas diferentes épocas do ano?
             </p>
-            <br />
 
             <h4>
               <img src="~assets/img/guia-de-cultivo/guia-ambiente-4.jpg" /> ÁGUA
             </h4>
-            <br />
             <p>
               Repare na umidade do local escolhido. Prefira locais com uma fonte
               de água próxima, ou já planeje ter um regador, uma mangueira ou
               recipientes para transportar água.
             </p>
-            <br />
 
             <h4>
               <img src="~assets/img/guia-de-cultivo/guia-ambiente-5.jpg" />
               VENTO
             </h4>
-            <br />
             <p>
               Repare na direção e na força do vento. Ele te indicará, entre
               outros fatores, de onde virá a chuva. Ventos fortes e frequentes
@@ -72,7 +62,6 @@
               movimento amarrando a planta a tutores feitos com gravetos, arames
               ou bambu.
             </p>
-            <br />
           </div>
           <div class="box">
             <h4 class="text-center title">OUTROS ELEMENTOS</h4>
@@ -83,11 +72,7 @@
             presentes no espaço, eles podem se transformar em recursos valiosos
             para sua horta.
           </div>
-          <br />
-          <br />
           <h3 class="text-center title">MATERIAIS</h3>
-          <br />
-
           <p>
             Comece a montagem separando os materiais que você irá utilizar.
             Materiais necessários:
@@ -134,9 +119,7 @@
               fundamentais deste processo!
             </p>
           </div>
-          <br />
           <h3 class="text-center title">RECIPIENTES</h3>
-          <br />
 
           <p>
             São infinitas as possibilidades de recipiente para o plantio. Tudo
@@ -155,7 +138,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-recipientes.png" />
           </div>
-          <br />
           <div class="tip">
             <h3 class="text-center title">DICAS</h3>
             <p>
@@ -171,7 +153,6 @@
               da planta inteira na internet.
             </p>
           </div>
-          <br />
           <h3 class="text-center title">O SOLO</h3>
           <p>
             Você vai precisar recriar a estrutura do solo no recipiente que
@@ -180,7 +161,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-o-solo-1.png" />
           </div>
-          <br />
           <div>
             <h4>01. MATÉRIA ORGÂNICA</h4>
             <p>

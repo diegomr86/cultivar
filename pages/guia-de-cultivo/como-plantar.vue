@@ -16,24 +16,20 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-plantar-semente.png" />
           </div>
-          <br />
           <h3 class="text-center">Parte de uma planta mãe</h3>
           <p class="text-center"><strong>Estaca</strong></p>
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-plantar-mae-1.png" />
           </div>
-          <br />
           <p class="text-center"><strong>Touceira</strong></p>
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-plantar-mae-2.png" />
           </div>
-          <br />
           <h3 class="text-center">Muda</h3>
           <p class="text-center"><strong>Planta já desenvolvida</strong></p>
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-plantar-muda.png" />
           </div>
-          <br />
           <h2 class="text-center title">SEMENTE</h2>
           <p>
             Quando a propagação é feita por semente, pode ser realizada no local
@@ -45,7 +41,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-semente-1.png" />
           </div>
-          <br />
           <p>
             As sementeiras podem ser compradas ou feitas com embalagens
             reutilizadas, como as caixas de ovos e rolinhos de papel higiênico
@@ -55,7 +50,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-semente-2.png" />
           </div>
-          <br />
           <p>
             Procure sempre utilizar sementes de origem conhecida e orgânica, as
             chamadas sementes crioulas ou nativas. Você pode encontrar em feiras
@@ -65,7 +59,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-semente-3.png" />
           </div>
-          <br />
           <p>
             Preste atenção para não compactar a terra que for usada para cobrir
             as sementes e dobre a atenção e o cuidado nos primeiros dias após a
@@ -97,7 +90,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-estaca.png" />
           </div>
-          <br />
           <div class="tip">
             <h3 class="text-center title">DICA</h3>
             <p>
@@ -106,7 +98,6 @@
               estufa.
             </p>
           </div>
-          <br />
           <h2 class="text-center title">TOUCEIRAS E RIZOMAS</h2>
           <p>
             Algumas plantas se reproduzem criando brotos ao redor da planta mãe.
@@ -118,12 +109,10 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-touceiras-1.png" />
           </div>
-          <br />
           <p>Faça um corte preciso separando o novo broto da planta mãe</p>
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-touceiras-2.png" />
           </div>
-          <br />
           <p>
             Limpe as folhas e raízes secas, faça uma poda nas folhas para
             reduzir a área de evaporação
@@ -131,12 +120,10 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-touceiras-3.png" />
           </div>
-          <br />
           <p>Enterre o novo broto em terra fofa e rica em matéria orgânica.</p>
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-touceiras-4.png" />
           </div>
-          <br />
           <h2 class="text-center title">REBROTA</h2>
           <p>
             Existe ainda outro jeito muito curioso de iniciar o cultivo de uma
@@ -165,7 +152,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-rebrota-alface.png" />
           </div>
-          <br />
           <h3>Gengibre</h3>
           <ol>
             <li>
@@ -185,7 +171,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-rebrota-gengibre.png" />
           </div>
-          <br />
           <h3>Cebola</h3>
           <ol>
             <li>
@@ -204,7 +189,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-rebrota-cebola.png" />
           </div>
-          <br />
           <h3>Alho</h3>
           <ol>
             <li>1. Separe um dente de alho novo e grande.</li>
@@ -220,7 +204,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-rebrota-alho.png" />
           </div>
-          <br />
           <h3>Batata doce</h3>
           <ol>
             <li>
@@ -244,7 +227,6 @@
               src="~assets/img/guia-de-cultivo/guia-rebrota-batata-doce.png"
             />
           </div>
-          <br />
           <h3>Abacaxi</h3>
           <ol>
             <li>
@@ -263,7 +245,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-rebrota-abacaxi.png" />
           </div>
-          <br />
           <h2 class="text-center title">COMBINANDO PLANTAS</h2>
           <p>
             Um outro aspecto muito interessante e que você pode aproveitar é a
@@ -287,7 +268,6 @@
               src="~assets/img/guia-de-cultivo/guia-combinando-plantas.png"
             />
           </div>
-          <br />
           <h2 class="text-center title">PLANTAS COMPANHEIRAS</h2>
           <p>Confira abaixo algumas plantas que gostam de ficar próximas</p>
           <div class="img-wrapper">

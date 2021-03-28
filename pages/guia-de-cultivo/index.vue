@@ -14,10 +14,6 @@
       <p class="text-center">
         A seguir você encontra informações importantes pra saber como começar!
       </p>
-      <b-button block variant="primary" to="/guia-de-cultivo/dicas-basicas">
-        Dicas básicas
-      </b-button>
-      <br />
       <b-button
         block
         variant="primary"
@@ -40,6 +36,10 @@
         to="/guia-de-cultivo/cuidados-com-a-horta"
       >
         Cuidados com a Horta
+      </b-button>
+      <br />
+      <b-button block variant="primary" to="/guia-de-cultivo/dicas-basicas">
+        Dicas básicas
       </b-button>
       <br />
     </b-container>

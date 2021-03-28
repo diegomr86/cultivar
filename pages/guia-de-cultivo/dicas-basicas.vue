@@ -164,9 +164,9 @@
       <b-button
         block
         variant="primary"
-        to="/guia-de-cultivo/planejamento-da-horta"
+        to="/ferramentas/o-que-plantar-esse-mes"
       >
-        Saiba como planejar seu cultivo
+        Veja o que plantar esse mês
       </b-button>
     </b-container>
   </div>

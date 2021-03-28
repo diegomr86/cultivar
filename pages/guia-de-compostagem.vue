@@ -1,6 +1,6 @@
 <template>
   <div>
-    <breadcrumb active="Guia de compostagem doméstica" />
+    <breadcrumb active="Guia de compostagem" />
     <b-container fluid class="guide">
       <div class="cap-1">
         <div class="item item-body" padding>

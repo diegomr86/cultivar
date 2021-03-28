@@ -40,7 +40,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-lua-nova.png" />
           </div>
-          <br />
           <p>
             Nesta fase, ela começa exercer influência sobre a Terra, a seiva
             (sangue da planta) manifesta-se em maior quantidade no caule, em
@@ -59,7 +58,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-lua-crescente.png" />
           </div>
-          <br />
           <p>
             Fase em que a lua exerce influência muito boa sobre as plantas,
             nessa fase a seiva está presente em maior quantidade no caule, nos
@@ -81,7 +79,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-lua-cheia.png" />
           </div>
-          <br />
           <p>
             Fase em que a influência sobre a terra chega ao ponto máximo, mas só
             nos primeiros dias, porque depois ela começa já mingar. No início
@@ -95,7 +92,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-lua-minguante.png" />
           </div>
-          <br />
           <p>
             Nesta fase é pouca a influência da lua sobre a terra. É provável que
             esta força seja insignificante.A energia ou força contida na terra
@@ -192,7 +188,6 @@
             </p>
             <p>- Os insetos se manifestam mais nas luas fortes.</p>
           </div>
-          <br />
           <h2 class="text-center title">OLHANDO PARA DENTRO</h2>
           <p>
             Existem inúmeras espécies de hortaliças que você pode cultivar com
@@ -225,7 +220,6 @@
               >
             </p>
           </div>
-          <br />
           <p>
             Liste as ervas e hortaliças que você e sua família mais gostam, faça
             uma rápida pesquisa na nossa lista das principais hortaliças para

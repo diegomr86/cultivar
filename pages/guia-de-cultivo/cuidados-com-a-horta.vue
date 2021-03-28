@@ -45,7 +45,6 @@
               sistemas caseiros de irrigação de hortas domésticas na internet.
             </p>
           </div>
-          <br />
           <h3 class="text-center title">PODAS</h3>
           <p>
             Cortar as folhas secas, doentes ou machucadas deve ser um processo
@@ -68,7 +67,6 @@
               próprio curso e obteve resultados impressionantes.
             </p>
           </div>
-          <br />
           <h3 class="text-center title">ADUBAÇÃO</h3>
           <p>
             Quando plantamos em recipientes isolados (vasos, canteiros), o
@@ -94,7 +92,6 @@
               solo em contato com as raízes.
             </p>
           </div>
-          <br />
           <h3 class="text-center title">MÉTODOS DE COLHEITA</h3>
           <p>
             A colheita é um momento de suma importância em uma horta, ajuda a
@@ -113,7 +110,6 @@
           <div class="img-wrapper">
             <img src="~assets/img/guia-de-cultivo/guia-colheita.png" />
           </div>
-          <br />
           <h3 class="text-center title">PRAGAS E DOENÇAS (BIOINDICADORES)</h3>
           <p>
             Para a abordagem orgânica de agricultura, o surgimento de uma
@@ -136,7 +132,6 @@
               src="~assets/img/guia-de-cultivo/guia-pragas-e-doencas-1.png"
             />
           </div>
-          <br />
           <p>
             Outras estratégias também podem ser utilizadas com bastante êxito e
             sem agressividade. Plantas aromáticas, por exemplo, são muito
@@ -153,7 +148,6 @@
               src="~assets/img/guia-de-cultivo/guia-pragas-e-doencas-2.png"
             />
           </div>
-          <br />
           <div class="tip">
             <h3 class="text-center title">DICA</h3>
             <p>
@@ -164,7 +158,6 @@
               pimenta e o preparado de sabão.
             </p>
           </div>
-          <br />
           <h3 class="text-center title">MÃOS NA MASSA!</h3>
           <p>
             Agora que você já é um expert no cultivo de hortaliças está na hora
@@ -173,12 +166,8 @@
         </div>
       </div>
       <CultivationGuideRef />
-      <b-button
-        block
-        variant="primary"
-        to="/ferramentas/o-que-plantar-esse-mes"
-      >
-        Veja o que plantar esse mês
+      <b-button block variant="primary" to="/guia-de-cultivo/dicas-basicas">
+        Veja nossas dicas básicas de cultivo
       </b-button>
     </b-container>
   </div>
