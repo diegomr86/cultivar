@@ -42,6 +42,11 @@ export default {
         content: this.pageDescription(),
       },
       {
+        hid: 'og:description',
+        name: 'og:description',
+        content: this.pageDescription(),
+      },
+      {
         hid: 'og:title',
         name: 'og:title',
         content: this.pageTitle(),
