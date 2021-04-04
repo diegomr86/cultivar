@@ -71,7 +71,7 @@ UserSchema.methods.generateJWT = function () {
       exp: parseInt(exp.getTime() / 1000),
       ...this.data(),
     },
-    process.env.SECRET || 'secret'
+    process.env.SECRET || process.env.npm_package_name
   )
 }
 

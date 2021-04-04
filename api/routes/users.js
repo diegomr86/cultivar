@@ -3,21 +3,41 @@ const router = require('express').Router()
 const auth = require('../config/auth')
 const User = mongoose.model('User')
 
-router.get('/', auth.admin, (req, res) => {
-  const query = {}
+// router.get('/', auth.admin, (req, res) => {
+//   const query = {}
 
-  User.find(query).exec((err, users) => {
-    if (err) {
-      res.status(422).send(err.response.data)
-    } else {
-      res.json(users.map((user) => user.data()))
-    }
+//   User.find(query).exec((err, users) => {
+//     if (err) {
+//       res.status(422).send(err.response.data)
+//     } else {
+//       res.json(users.map((user) => user.data()))
+//     }
+//   })
+// })
+
+router.get('/:id', (req, res) => {
+  const query = {
+    $or: [
+      { id: req.params.id },
+      { email: req.params.id },
+      { id: req.params.id },
+    ],
+  }
+  User.find(query).then((user) => {
+    return res.send(user.data())
   })
 })
 
-router.get('/:id', (req, res) => {
-  User.findById(req.params.id).then((user) => {
-    return res.send(user.data())
+router.get('/:id/check', (req, res) => {
+  const query = {
+    $or: [
+      { id: req.params.id },
+      { email: req.params.id },
+      { phone: req.params.id },
+    ],
+  }
+  User.find(query).then((user) => {
+    return res.send({ name: user.name, picture: user.picture })
   })
 })
 

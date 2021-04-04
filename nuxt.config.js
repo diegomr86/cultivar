@@ -2,6 +2,7 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
+  // serverMiddleware: ['~/api/index.js'],
   head: {
     title: 'Cultivar',
     meta: [
@@ -117,6 +118,9 @@ export default {
   },
 
   auth: {
+    redirect: {
+      home: '/admin',
+    },
     strategies: {
       local: {
         token: {
@@ -125,15 +129,11 @@ export default {
         },
         user: {
           property: false,
-          // autoFetch: true
         },
         endpoints: {
-          login: {
-            url: '/login',
-            method: 'post',
-          },
-          logout: { url: '/logout', method: 'post' },
-          user: { url: '/me', method: 'get' },
+          login: { url: '/auth/login', method: 'post' },
+          logout: { url: '/auth/logout', method: 'get' },
+          user: { url: '/auth/me', method: 'get' },
         },
       },
     },
@@ -141,6 +141,11 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-190127946-1',
+  },
+  proxy: {
+    pathRewrite: {
+      '^/api/': '/',
+    },
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

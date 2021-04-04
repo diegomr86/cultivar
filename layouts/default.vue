@@ -15,6 +15,7 @@
         </b-col>
       </b-row>
     </div>
+    <Login />
     <client-only>
       <notifications />
     </client-only>
