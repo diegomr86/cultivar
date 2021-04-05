@@ -1,24 +1,18 @@
 import '../config/passport'
 import passport from 'passport'
+const mongoose = require('mongoose')
 const router = require('express').Router()
+const { authenticated } = require('../config/auth')
+const User = mongoose.model('User')
 
-// router.get('/github', passport.authenticate('github'))
-
-// router.get(
-//   '/github/callback',
-//   passport.authenticate('github', { failureRedirect: '/login?error=true' }),
-//   function (req, res) {
-//     res.redirect('/login')
-//   }
-// )
-
-router.get('/me', function (req, res) {
-  console.log('me')
-  res.send(req.user)
-})
-
-router.post('/me', function (req, res) {
-  res.send(req.user)
+router.get('/user', authenticated, (req, res) => {
+  User.findById(req.payload.id).exec((err, user) => {
+    if (!err && user) {
+      res.send(user.data())
+    } else {
+      res.status(422).send('Usuário não encontrado')
+    }
+  })
 })
 
 router.post('/login', (req, res) => {
@@ -34,11 +28,12 @@ router.post('/login', (req, res) => {
       {
         session: true,
       },
-      function (err, user, info) {
+      (err, user, info) => {
         if (err) {
           return res.status(500).json(err)
         }
         if (user) {
+          user.token = user.generateJWT()
           return res.json(user.toAuthJSON())
         } else {
           return res.status(422).json(info)
@@ -50,7 +45,7 @@ router.post('/login', (req, res) => {
   }
 })
 
-router.get('/logout', function (req, res) {
+router.get('/logout', (req, res) => {
   req.logout()
   res.redirect('/')
 })

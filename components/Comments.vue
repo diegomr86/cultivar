@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     async loadComments() {
-      this.comments = await this.$axios.$get('/api/comments', {
+      this.comments = await this.$axios.$get('/comments', {
         params: { target: this.target },
       })
     },

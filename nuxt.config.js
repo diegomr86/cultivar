@@ -2,7 +2,7 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // serverMiddleware: ['~/api/index.js'],
+  serverMiddleware: ['~/api/index.js'],
   head: {
     title: 'Cultivar',
     meta: [
@@ -86,7 +86,9 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: (process.env.BASE_URL || 'http://localhost:3000') + '/api',
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -116,28 +118,26 @@ export default {
   content: {
     liveEdit: false,
   },
-
   auth: {
-    redirect: {
-      home: '/admin',
-    },
     strategies: {
       local: {
         token: {
           property: 'token',
+          // required: true,
           type: 'Token',
         },
         user: {
           property: false,
+          // autoFetch: true
         },
         endpoints: {
           login: { url: '/auth/login', method: 'post' },
-          logout: { url: '/auth/logout', method: 'get' },
-          user: { url: '/auth/me', method: 'get' },
+          logout: { url: '/auth/logout', method: 'post' },
+          user: { url: '/auth/user', method: 'get' },
         },
       },
     },
-    scope: 'role',
+    scopeKey: 'role',
   },
   googleAnalytics: {
     id: 'UA-190127946-1',
@@ -148,5 +148,7 @@ export default {
     },
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    watch: ['api/**/*.js'],
+  },
 }

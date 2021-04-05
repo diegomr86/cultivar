@@ -28,7 +28,7 @@ export default {
   },
   async created() {
     if (!this.profile) {
-      this.profile = await this.$axios.$get('/api/users/' + this.id)
+      this.profile = await this.$axios.$get('/users/' + this.id)
     }
   },
 }

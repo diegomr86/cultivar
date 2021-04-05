@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-modal v-model="showLogin" :title="title" hide-footer>
+      {{ $auth.user }}
       <div class="login text-center pb-4">
         <b-container>
           <img src="~/assets/img/logo.png" class="logo" width="80" />
@@ -8,11 +9,11 @@
           <div v-if="!show_register">
             <form v-if="!user" @submit.prevent="check">
               <!-- <b-alert v-if="error" variant="danger" show>{{ error }}</b-alert> -->
-              <b-form-group label="Nome de usuário ou e-mail">
-                <b-form-input
-                  v-model="form.email"
-                  placeholder="Digite seu e-mail ou telefone"
-                />
+              <b-form-group
+                label="Nome de usuário, e-mail ou telefone"
+                class="text-left"
+              >
+                <b-form-input v-model="form.email" />
               </b-form-group>
               <button
                 v-if="form.email"
@@ -23,18 +24,11 @@
               </button>
             </form>
             <form v-if="user" class="form-auth-small" @submit.prevent="login">
-              <b-form-group label="Nome de usuário ou e-mail">
-                <b-form-input
-                  v-model="form.email"
-                  placeholder="Digite seu e-mail ou telefone"
-                />
+              <b-form-group label="Nome de usuário ou e-mail" class="text-left">
+                <b-form-input v-model="form.email" />
               </b-form-group>
-              <b-form-group label="Senha">
-                <b-form-input
-                  v-model="form.password"
-                  type="password"
-                  placeholder="Senha"
-                />
+              <b-form-group label="Senha" class="text-left">
+                <b-form-input v-model="form.password" type="password" />
               </b-form-group>
               <button type="submit" class="btn btn-primary btn-lg btn-block">
                 ENTRAR
@@ -43,24 +37,21 @@
           </div>
           <div v-else>
             <form class="form-auth-small" @submit.prevent="register">
-              <b-form-group label="E-mail">
-                <b-form-input
-                  v-model="form.email"
-                  placeholder="Digite seu e-mail ou telefone"
-                />
+              <p>Cadastre-se</p>
+              <b-form-group label="Nome completo" class="text-left">
+                <b-form-input v-model="form.name" />
               </b-form-group>
-              <b-form-group label="Nome de usuário">
-                <b-form-input
-                  v-model="form.email"
-                  placeholder="Digite seu e-mail ou telefone"
-                />
+              <b-form-group label="E-mail" class="text-left">
+                <b-form-input v-model="form.email" />
               </b-form-group>
-              <b-form-group label="Senha">
-                <b-form-input
-                  v-model="form.password"
-                  type="password"
-                  placeholder="Senha"
-                />
+              <b-form-group label="Nome de usuário" class="text-left">
+                <b-form-input v-model="form.username" />
+              </b-form-group>
+              <b-form-group label="Telefone" class="text-left">
+                <b-form-input v-model="form.phone" />
+              </b-form-group>
+              <b-form-group label="Senha" class="text-left">
+                <b-form-input v-model="form.password" type="password" />
               </b-form-group>
               <button type="submit" class="btn btn-primary btn-lg btn-block">
                 CONTINUAR
@@ -103,16 +94,18 @@ export default {
     async check() {
       if (this.form.email) {
         this.user = await this.$axios
-          .$get('/api/users/' + this.form.email + '/check')
+          .$get('/users/' + this.form.email + '/check')
           .catch(() => {
-            this.register = true
+            this.show_register = true
             const userName = this.form.email
               .replace('(', '')
               .replace(')', '')
               .replace('-', '')
               .replace('.', '')
               .replace(' ', '')
-            if (!userName.includes('@')) {
+            if (userName.includes('@')) {
+              this.form.username = userName.split('@')[0]
+            } else {
               this.form.email = null
               if (!isNaN(userName)) {
                 this.form.phone = userName
@@ -130,11 +123,11 @@ export default {
     },
     async register() {
       const user = await this.$axios
-        .$post('/api/users/register', this.register_form)
+        .$post('/users/register', this.form)
         .catch(this.showError)
-      if (user && user._id) {
+      if (user && user.id) {
         await this.$auth
-          .loginWith('local', { data: this.register_form })
+          .loginWith('local', { data: this.form })
           .catch(this.showError)
       }
     },

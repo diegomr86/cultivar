@@ -9,12 +9,22 @@ const UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: true,
+      required: () => {
+        return !this.phone
+      },
       unique: true,
       lowercase: true,
       match: [/\S+@\S+\.\S+/, 'inválido'],
     },
     phone: {
+      type: String,
+      required: () => {
+        return !this.email
+      },
+      unique: true,
+      lowercase: true,
+    },
+    username: {
       type: String,
       required: true,
       unique: true,
@@ -55,6 +65,7 @@ UserSchema.methods.data = function () {
     id: this.id,
     email: this.email,
     phone: this.phone,
+    username: this.username,
     name: this.name,
     role: this.role,
     picture: this.picture,

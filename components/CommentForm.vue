@@ -42,7 +42,7 @@ export default {
   methods: {
     async save() {
       if (this.form.message) {
-        const comment = await this.$axios.$post('/api/comments', this.form)
+        const comment = await this.$axios.$post('/comments', this.form)
         if (comment) {
           this.$toast.success('Comentário enviado!')
           this.$emit('change', comment)

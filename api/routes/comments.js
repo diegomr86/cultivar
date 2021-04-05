@@ -4,7 +4,7 @@ const router = express.Router()
 const { authenticated } = require('../config/auth')
 const Comment = mongoose.model('Comment')
 
-router.get('/', authenticated, (req, res) => {
+router.get('/', (req, res) => {
   const query = { archived: false }
   if (req.query.target) {
     query.target = req.query.target
@@ -20,7 +20,7 @@ router.get('/', authenticated, (req, res) => {
     })
 })
 
-router.get('/:id', authenticated, (req, res) => {
+router.get('/:id', (req, res) => {
   const query = { _id: req.params.id }
   Comment.findOne(query).exec((err, comment) => {
     if (err) {

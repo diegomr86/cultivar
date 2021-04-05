@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const router = require('express').Router()
-const auth = require('../config/auth')
+const { authenticated } = require('../config/auth')
 const User = mongoose.model('User')
 
 // router.get('/', auth.admin, (req, res) => {
@@ -15,19 +15,6 @@ const User = mongoose.model('User')
 //   })
 // })
 
-router.get('/:id', (req, res) => {
-  const query = {
-    $or: [
-      { id: req.params.id },
-      { email: req.params.id },
-      { id: req.params.id },
-    ],
-  }
-  User.find(query).then((user) => {
-    return res.send(user.data())
-  })
-})
-
 router.get('/:id/check', (req, res) => {
   const query = {
     $or: [
@@ -36,8 +23,29 @@ router.get('/:id/check', (req, res) => {
       { phone: req.params.id },
     ],
   }
-  User.find(query).then((user) => {
-    return res.send({ name: user.name, picture: user.picture })
+  User.findOne(query).then((user) => {
+    if (user) {
+      return res.send(user.data())
+    } else {
+      return res.status(422).send('Usuário não encontrado')
+    }
+  })
+})
+
+router.get('/:id', (req, res) => {
+  const query = {
+    $or: [
+      { id: req.params.id },
+      { email: req.params.id },
+      { phone: req.params.id },
+    ],
+  }
+  User.findOne(query).then((user) => {
+    if (user) {
+      return res.send(user.data())
+    } else {
+      return res.status(422).send('Usuário não encontrado')
+    }
   })
 })
 
@@ -60,7 +68,7 @@ router.post('/register', (req, res, next) => {
     .catch(next)
 })
 
-router.put('/profile', auth.authenticated, (req, res, next) => {
+router.put('/profile', authenticated, (req, res, next) => {
   User.findById(req.payload.id).then((user) => {
     user.email = req.body.email
     user.phone = req.body.phone

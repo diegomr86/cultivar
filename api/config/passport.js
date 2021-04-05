@@ -12,7 +12,10 @@ passport.use(
       passwordField: 'password',
     },
     function (email, password, done) {
-      User.findOne({ email })
+      const query = {
+        $or: [{ email }, { username: email }, { phone: email }],
+      }
+      User.findOne(query)
         .then(function (user) {
           if (!user || !user.validPassword(password)) {
             return done(null, false, 'Usuário ou senha inválidos')
