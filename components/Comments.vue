@@ -32,7 +32,7 @@ export default {
   methods: {
     async loadComments() {
       this.comments = await this.$axios.$get('/comments', {
-        params: { target: this.target },
+        params: { target: this.target || this.$route.path },
       })
     },
     commentSaved(comment) {

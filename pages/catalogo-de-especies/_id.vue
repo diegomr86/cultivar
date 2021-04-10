@@ -10,6 +10,10 @@
       "
     />
     <b-container fluid>
+      <comments
+        v-if="$auth.loggedIn"
+        :target="'/catalogo-de-especies/' + especie.slug"
+      />
       <div class="item">
         <h2>{{ especie.nome_popular }}</h2>
         <p>{{ especie.nome_cientifico }}</p>
