@@ -3,9 +3,10 @@
   <div>
     <b-media class="pt-2">
       <template #aside>
-        <User :id="$auth.user.id.toString()" />
+        <User :user="$auth.user" />
       </template>
       <p>
+        <User :user="$auth.user" />
         <b-form-textarea
           v-model="form.message"
           :placeholder="form.comment ? 'Responder' : 'Adicione um comentário'"

@@ -17,10 +17,14 @@ passport.use(
       }
       User.findOne(query)
         .then(function (user) {
-          if (!user || !user.validPassword(password)) {
+          if (
+            user &&
+            (user.status === 'pending_password' || user.validPassword(password))
+          ) {
+            return done(null, user)
+          } else {
             return done(null, false, 'Usuário ou senha inválidos')
           }
-          return done(null, user)
         })
         .catch(done)
     }
@@ -40,11 +44,3 @@ passport.use(
 //     }
 //   )
 // )
-
-passport.serializeUser((user, done) => {
-  done(null, user)
-})
-
-passport.deserializeUser((user, done) => {
-  done(null, user)
-})

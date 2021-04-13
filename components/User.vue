@@ -1,13 +1,18 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <n-link v-if="profile" :to="'/membro/' + profile.id">
-    <b-avatar
-      :src="profile.picture.url"
-      class="mr-1"
-      size="2rem"
-      :alt="profile.name"
-    />
-  </n-link>
+  <span>
+    <pre>{{ profile }}aa</pre>
+    <n-link v-if="profile" :to="'/membro/' + profile.id">
+      <b-avatar
+        v-if="profile.picture && profile.picture.url"
+        :src="profile.picture.url"
+        class="mr-1"
+        size="2rem"
+        :alt="profile.name"
+      />
+      <b-avatar v-else class="mr-1" size="2rem" :alt="profile.name" />
+    </n-link>
+  </span>
 </template>
 <script>
 export default {

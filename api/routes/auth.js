@@ -1,4 +1,3 @@
-import '../config/passport'
 import passport from 'passport'
 const mongoose = require('mongoose')
 const router = require('express').Router()
@@ -6,7 +5,7 @@ const { authenticated } = require('../config/auth')
 const User = mongoose.model('User')
 
 router.get('/user', authenticated, (req, res) => {
-  User.findById(req.payload.id).exec((err, user) => {
+  User.findById(req.user.id).exec((err, user) => {
     if (!err && user) {
       res.send(user.data())
     } else {
@@ -17,10 +16,7 @@ router.get('/user', authenticated, (req, res) => {
 
 router.post('/login', (req, res) => {
   if (!req.body.email) {
-    return res.status(422).json('Email inválido')
-  }
-  if (!req.body.password) {
-    return res.status(422).json('Senha inválida')
+    return res.status(422).json('Nome de usuário, e-mail ou telefone inválidos')
   }
   try {
     passport.authenticate(
@@ -29,6 +25,7 @@ router.post('/login', (req, res) => {
         session: true,
       },
       (err, user, info) => {
+        console.log(err)
         if (err) {
           return res.status(500).json(err)
         }

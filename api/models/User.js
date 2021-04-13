@@ -9,8 +9,8 @@ const UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: () => {
-        return !this.phone
+      required() {
+        return !this.phone && !this.username
       },
       unique: true,
       lowercase: true,
@@ -18,21 +18,32 @@ const UserSchema = new mongoose.Schema(
     },
     phone: {
       type: String,
-      required: () => {
-        return !this.email
+      required() {
+        return !this.email && !this.username
       },
       unique: true,
       lowercase: true,
     },
     username: {
       type: String,
-      required: true,
+      required() {
+        return !this.email && !this.phone
+      },
       unique: true,
       lowercase: true,
     },
     name: String,
     picture: Object,
-    role: String,
+    region: String,
+    role: {
+      type: String,
+      default: 'member',
+    },
+    status: {
+      type: String,
+      default: 'pending_password',
+      required: true,
+    },
     hash: String,
     salt: String,
   },
@@ -62,25 +73,28 @@ UserSchema.methods.setPassword = function (password) {
 
 UserSchema.methods.data = function () {
   return {
+    _id: this._id,
     id: this.id,
     email: this.email,
     phone: this.phone,
     username: this.username,
     name: this.name,
-    role: this.role,
     picture: this.picture,
+    region: this.region,
+    status: this.status,
+    role: this.role,
   }
 }
 
 UserSchema.methods.generateJWT = function () {
   const today = new Date()
   const exp = new Date(today)
-  exp.setDate(today.getDate() + 3600)
+  exp.setDate(today.getDate() + 60)
 
   return jwt.sign(
     {
-      exp: parseInt(exp.getTime() / 1000),
       ...this.data(),
+      exp: parseInt(exp.getTime() / 1000),
     },
     process.env.SECRET || process.env.npm_package_name
   )
@@ -88,8 +102,8 @@ UserSchema.methods.generateJWT = function () {
 
 UserSchema.methods.toAuthJSON = function () {
   return {
-    token: this.generateJWT(),
     ...this.data(),
+    token: this.generateJWT(),
   }
 }
 
