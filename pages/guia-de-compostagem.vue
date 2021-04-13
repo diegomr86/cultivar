@@ -753,6 +753,7 @@
           </section>
         </div>
       </div>
+      <comments :target="'/guia-de-compostagem'" />
     </b-container>
   </div>
 </template>

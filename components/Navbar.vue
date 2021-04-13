@@ -11,7 +11,11 @@
       </div>
     </b-collapse>
     <b-navbar-nav class="ml-auto d-none d-md-block">
-      <b-nav-item-dropdown v-if="currentUser" :text="currentUser.name" right>
+      <b-nav-item-dropdown
+        v-if="currentUser"
+        :text="userLabel(currentUser)"
+        right
+      >
         <b-dropdown-item @click="$auth.logout()">Sair</b-dropdown-item>
       </b-nav-item-dropdown>
       <b-nav-item v-else right>

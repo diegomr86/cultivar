@@ -10,13 +10,15 @@ const CommentSchema = mongoose.Schema(
     target: {
       type: String,
       required: true,
+      index: true,
     },
     comment: {
       type: ObjectId,
       ref: 'Comment',
     },
     user: {
-      type: String,
+      type: ObjectId,
+      ref: 'User',
       required: true,
     },
     message: {
@@ -35,7 +37,7 @@ const CommentSchema = mongoose.Schema(
 )
 
 CommentSchema.virtual('answers', {
-  ref: 'Card',
+  ref: 'Comment',
   localField: '_id',
   foreignField: 'comment',
 })

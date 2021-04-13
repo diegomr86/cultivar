@@ -33,6 +33,7 @@ const UserSchema = new mongoose.Schema(
       lowercase: true,
     },
     name: String,
+    code: String,
     picture: Object,
     region: String,
     role: {
@@ -79,6 +80,7 @@ UserSchema.methods.data = function () {
     phone: this.phone,
     username: this.username,
     name: this.name,
+    code: this.code,
     picture: this.picture,
     region: this.region,
     status: this.status,

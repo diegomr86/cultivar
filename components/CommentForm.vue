@@ -1,20 +1,30 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <b-media class="pt-2">
-      <template #aside>
-        <User :user="$auth.user" />
-      </template>
-      <p>
-        <User :user="$auth.user" />
+    <b-media class="pt-2" no-body>
+      <b-media-aside>
+        <User v-if="$auth.loggedIn" :user="currentUser" />
+        <User v-else />
+      </b-media-aside>
+      <b-media-body>
         <b-form-textarea
+          v-if="$auth.loggedIn"
           v-model="form.message"
-          :placeholder="form.comment ? 'Responder' : 'Adicione um comentário'"
+          :placeholder="form.comment ? 'Responder' : 'Deixe seu comentário'"
         />
-        <b-btn v-if="form.message" block class="mt-2" @click="save">
+        <b-btn v-else block @click="$bvModal.show('login-modal')">
+          Deixe seu comentário
+        </b-btn>
+        <b-btn
+          v-if="form.message"
+          variant="primary"
+          block
+          class="mt-2"
+          @click="save"
+        >
           Salvar comentário
         </b-btn>
-      </p>
+      </b-media-body>
     </b-media>
   </div>
 </template>
@@ -43,9 +53,9 @@ export default {
   methods: {
     async save() {
       if (this.form.message) {
-        const comment = await this.$axios.$post('/comments', this.form)
+        const comment = await this.$axios.$post('/api/comments', this.form)
         if (comment) {
-          this.$toast.success('Comentário enviado!')
+          this.notify('Comentário enviado!')
           this.$emit('change', comment)
           this.form.message = null
         }

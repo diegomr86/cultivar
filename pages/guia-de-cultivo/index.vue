@@ -49,10 +49,8 @@
         Dicas básicas
       </b-button>
       <br />
+      <comments :target="'/guia-de-cultivo'" />
     </b-container>
-    <div class="test">
-      <div class="disc"></div>
-    </div>
   </div>
 </template>
 <script>

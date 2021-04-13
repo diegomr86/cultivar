@@ -54,6 +54,11 @@ router.get('/:id/find_or_create', (req, res) => {
       } else {
         user.username = userName
       }
+      if (user.email && !user.username) {
+        user.username = user.email.split('@')[0]
+      }
+
+      user.code = generateCode(user)
       await user.save()
       res.send(user.data())
     }
@@ -87,6 +92,7 @@ router.put('/profile', authenticated, (req, res, next) => {
     user.name = req.body.name
     user.picture = req.body.picture
     user.status = 'registered'
+    user.code = generateCode(user)
 
     if (req.body.password) {
       user.setPassword(req.body.password)
@@ -100,6 +106,13 @@ router.put('/profile', authenticated, (req, res, next) => {
       .catch(next)
   })
 })
+
+const generateCode = (user) => {
+  const code = user.name || user.username || user.email
+  if (code) {
+    return code.substring(0, 2).toUpperCase()
+  }
+}
 
 const formatPhone = (phone) => {
   return phone

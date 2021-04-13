@@ -87,7 +87,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: (process.env.BASE_URL || 'http://localhost:3000') + '/api',
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -119,6 +119,7 @@ export default {
     liveEdit: false,
   },
   auth: {
+    redirect: false,
     strategies: {
       local: {
         token: {
@@ -131,9 +132,9 @@ export default {
           // autoFetch: true
         },
         endpoints: {
-          login: { url: '/auth/login', method: 'post' },
-          logout: { url: '/auth/logout', method: 'post' },
-          user: { url: '/auth/user', method: 'get' },
+          login: { url: '/api/auth/login', method: 'post' },
+          logout: { url: '/api/auth/logout', method: 'post' },
+          user: { url: '/api/auth/user', method: 'get' },
         },
       },
     },

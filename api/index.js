@@ -1,5 +1,6 @@
 import './database'
 
+import path from 'path'
 import cors from 'cors'
 import express from 'express'
 import session from 'express-session'
@@ -22,21 +23,10 @@ app.use(express.json())
 app.use(passport.initialize())
 app.use(passport.session())
 
-passport.serializeUser((user, done) => {
-  console.log('serializeUser')
-  console.log(user)
-  done(null, user)
-})
-
-passport.deserializeUser((user, done) => {
-  console.log('deserializeUser')
-  console.log(user)
-  done(null, user)
-})
-
 require('./config/passport')
 
 app.use(routes)
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 app.use(cors())
 

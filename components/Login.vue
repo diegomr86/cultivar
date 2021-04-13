@@ -10,7 +10,9 @@
           <div class="pt-3">
             <!-- Pede o nome de usuário, e-mail ou telefone -->
             <form v-if="!user" @submit.prevent="findUser">
-              <b-form-group label="Nome de usuário, e-mail ou telefone">
+              <b-form-group
+                label="Digite seu nome de usuário, e-mail ou telefone"
+              >
                 <b-form-input v-model="form.email" />
               </b-form-group>
               <button
@@ -22,19 +24,25 @@
               </button>
             </form>
             <div v-if="user">
-              <b-media class="pb-4">
-                <template #aside>
-                  <User :user="user" />
-                </template>
-                <h5 class="pt-1">
-                  {{ user.name || user.email || user.phone || user.username }}
-                </h5>
-              </b-media>
               <div v-if="$auth.loggedIn">
                 <form
                   v-if="user.status === 'pending_password'"
                   @submit.prevent="setPassword"
                 >
+                  <b-media class="pb-4">
+                    <template #aside>
+                      <User :user="user" />
+                    </template>
+                    <h5 class="pt-1">
+                      {{ userLabel(user) }}
+                    </h5>
+                    <a @click="clearForm">
+                      <small>
+                        <i class="fas fa-exchange-alt" />
+                        Trocar de usuário
+                      </small>
+                    </a>
+                  </b-media>
                   <p>Vamos cadastrar sua senha?</p>
                   <b-form-group label="Digite sua senha">
                     <b-form-input v-model="form.password" type="password" />
@@ -53,19 +61,25 @@
                   </button>
                 </form>
                 <form v-else @submit.prevent="updateProfile">
-                  <p>
-                    <small
-                      >Complete seu cadastro para ter uma experiência mais
-                      personalizada</small
-                    >
-                  </p>
+                  <div class="text-center mb-3">
+                    <pictures-upload
+                      v-model="form.picture"
+                      label="Sua foto"
+                      type="avatar"
+                    />
+                  </div>
                   <b-form-group label="Nome completo">
                     <b-form-input v-model="form.name" />
                   </b-form-group>
                   <b-form-group label="E-mail">
                     <b-form-input v-model="form.email" />
                   </b-form-group>
-                  <b-form-group label="Nome de usuário">
+                  <b-form-group
+                    label="Nome de usuário"
+                    :description="
+                      'Você poderá ser mencionado como: @' + form.username
+                    "
+                  >
                     <b-form-input v-model="form.username" />
                   </b-form-group>
                   <b-form-group label="Telefone">
@@ -81,10 +95,27 @@
               </div>
               <div v-else>
                 <form @submit.prevent="login">
+                  <b-media class="pb-4">
+                    <template #aside>
+                      <User :user="user" />
+                    </template>
+                    <h5 class="pt-1">
+                      {{ userLabel(user) }}
+                    </h5>
+                    <div>
+                      <a @click="clearForm">
+                        <small>
+                          <i class="fas fa-exchange-alt" />
+                          Trocar de usuário
+                        </small>
+                      </a>
+                    </div>
+                  </b-media>
                   <b-form-group label="Digite sua senha para continuar">
                     <b-form-input v-model="form.password" type="password" />
                   </b-form-group>
                   <button
+                    v-if="form.password"
                     type="submit"
                     class="btn btn-primary btn-lg btn-block"
                   >
@@ -134,11 +165,14 @@ export default {
   created() {
     this.populateForm()
   },
+  mounted() {
+    // this.$bvModal.show('login-modal')
+  },
   methods: {
     async findUser() {
       if (this.form.email) {
         this.user = await this.$axios
-          .$get('/users/' + this.form.email + '/find_or_create')
+          .$get('/api/users/' + this.form.email + '/find_or_create')
           .catch(this.showError)
         if (this.user && this.user.status === 'pending_password') {
           this.form.password = 'password'
@@ -155,7 +189,7 @@ export default {
         if (this.user.status === 'registered') {
           this.$bvModal.hide('login-modal')
         } else {
-          this.user = this.$auth.user
+          this.user = this.currentUser
         }
       }
     },
@@ -164,11 +198,11 @@ export default {
         this.form.password &&
         this.form.password === this.form.confirm_password
       ) {
-        const user = await this.$axios
-          .$post('/users/set_password', this.form)
+        this.user = await this.$axios
+          .$post('/api/users/set_password', this.form)
           .catch(this.showError)
-        if (user) {
-          this.$auth.setUser(user)
+        if (this.user) {
+          this.$auth.setUser(this.user)
           this.notify('Sua senha foi salva com sucesso')
         }
       } else {
@@ -176,11 +210,11 @@ export default {
       }
     },
     async updateProfile() {
-      const user = await this.$axios
-        .$put('/users/profile', this.form)
+      this.user = await this.$axios
+        .$put('/api/users/profile', this.form)
         .catch(this.showError)
-      if (user) {
-        this.$auth.setUser(user)
+      if (this.user) {
+        this.$auth.setUser(this.user)
         this.notify('Seus dados foram atualizados com sucesso')
         this.$bvModal.hide('login-modal')
       }
@@ -191,6 +225,13 @@ export default {
           this.form[key] = this.user[key] || ''
         })
       }
+    },
+    clearForm() {
+      this.user = null
+      this.$auth.logout()
+      Object.keys(this.form).forEach((key) => {
+        this.form[key] = ''
+      })
     },
   },
 }

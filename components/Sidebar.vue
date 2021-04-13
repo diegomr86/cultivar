@@ -42,7 +42,7 @@
       </b-nav>
     </b-list-group-item>
     <b-list-group-item v-if="currentUser">
-      <i class="fa fa-user" /> {{ currentUser.name }}
+      <i class="fa fa-user" /> {{ userLabel(currentUser) }}
     </b-list-group-item>
     <b-list-group-item v-if="currentUser" class="submenu">
       <b-nav vertical>

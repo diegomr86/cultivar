@@ -10,10 +10,6 @@
       "
     />
     <b-container fluid>
-      <comments
-        v-if="$auth.loggedIn"
-        :target="'/catalogo-de-especies/' + especie.slug"
-      />
       <div class="item">
         <h2>{{ especie.nome_popular }}</h2>
         <p>{{ especie.nome_cientifico }}</p>
@@ -22,11 +18,11 @@
         <div class="img-wrapper">
           <img :src="require('~/assets/img/plants/' + especie.slug + '.png')" />
         </div>
-        <p>{{ especie.descricao }}</p>
+        <p class="text-justify">{{ especie.descricao }}</p>
         <h4>Recomendações de aproveitamento</h4>
-        <p>{{ especie.aproveitamento }}</p>
+        <p class="text-justify">{{ especie.aproveitamento }}</p>
         <h4>Época e regiões para plantio</h4>
-        <b-row class="plantio-table" fluid>
+        <b-row class="plantio-table" fluid no-gutters>
           <b-col class="{active: (currentRegion == 'Centro-oeste')}">
             <p>C. Oeste</p>
             <p>{{ especie.plantio['Centro-oeste'] }}</p>
@@ -49,14 +45,15 @@
           </b-col>
         </b-row>
         <p
+          v-if="Object.values(especie.plantio).includes('*')"
           class="text-right table-legend"
-          ng-if="especie.plantio.indexOf('*') >= 0"
         >
-          * Cultivo não recomendado.
+          <small>* Cultivo não recomendado.</small>
         </p>
-        <p>{{ especie.epoca_regiao }}</p>
+        <br />
+        <p class="text-justify">{{ especie.epoca_regiao }}</p>
         <h4>Colheita:</h4>
-        <p>{{ especie.colheita }} dias</p>
+        <p class="text-justify">{{ especie.colheita }} dias</p>
         <h4>Plantas companheiras:</h4>
         <p>
           <span
@@ -73,6 +70,7 @@
           </span>
         </p>
       </div>
+      <comments :target="'/catalogo-de-especies/' + especie.slug" />
     </b-container>
   </div>
 </template>

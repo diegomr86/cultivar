@@ -6,13 +6,25 @@ if (!Vue.__my_mixin__) {
   const globalMixin = {
     computed: {
       currentUser() {
-        return this.$auth.user
+        if (this.$auth.user && this.$auth.user.id) {
+          return this.$auth.user
+        } else {
+          return null
+        }
       },
       currentRegion() {
         return this.$store.state.region
       },
+      baseURL() {
+        return this.$axios.defaults.baseURL
+      },
     },
     methods: {
+      userLabel(user) {
+        return user
+          ? user.name || user.username || user.email || user.phone
+          : ''
+      },
       notify(msg, type) {
         this.$notify({
           type: type || 'success',
