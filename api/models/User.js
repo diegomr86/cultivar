@@ -12,7 +12,10 @@ const UserSchema = new mongoose.Schema(
       required() {
         return !this.phone && !this.username
       },
-      unique: true,
+      index: {
+        unique: true,
+        partialFilterExpression: { email: { $type: 'string' } },
+      },
       lowercase: true,
       match: [/\S+@\S+\.\S+/, 'inválido'],
     },
@@ -21,7 +24,10 @@ const UserSchema = new mongoose.Schema(
       required() {
         return !this.email && !this.username
       },
-      unique: true,
+      index: {
+        unique: true,
+        partialFilterExpression: { phone: { $type: 'string' } },
+      },
       lowercase: true,
     },
     username: {
@@ -29,7 +35,10 @@ const UserSchema = new mongoose.Schema(
       required() {
         return !this.email && !this.phone
       },
-      unique: true,
+      index: {
+        unique: true,
+        partialFilterExpression: { username: { $type: 'string' } },
+      },
       lowercase: true,
     },
     name: String,
@@ -47,6 +56,8 @@ const UserSchema = new mongoose.Schema(
     },
     hash: String,
     salt: String,
+    recovery_hash: String,
+    recovery_salt: String,
   },
   {
     timestamps: true,
@@ -58,6 +69,13 @@ UserSchema.plugin(uniqueValidator, {
   message: 'Este nome já está sendo usado',
 })
 
+UserSchema.methods.setPassword = function (password) {
+  this.salt = crypto.randomBytes(16).toString('hex')
+  this.hash = crypto
+    .pbkdf2Sync(password, this.salt, 10000, 512, 'sha512')
+    .toString('hex')
+}
+
 UserSchema.methods.validPassword = function (password) {
   const hash = crypto
     .pbkdf2Sync(password, this.salt, 10000, 512, 'sha512')
@@ -65,11 +83,18 @@ UserSchema.methods.validPassword = function (password) {
   return this.hash === hash
 }
 
-UserSchema.methods.setPassword = function (password) {
-  this.salt = crypto.randomBytes(16).toString('hex')
-  this.hash = crypto
-    .pbkdf2Sync(password, this.salt, 10000, 512, 'sha512')
+UserSchema.methods.setRecoveryCode = function (recoveryCode) {
+  this.recovery_salt = crypto.randomBytes(16).toString('hex')
+  this.recovery_hash = crypto
+    .pbkdf2Sync(recoveryCode, this.recovery_salt, 10000, 512, 'sha512')
     .toString('hex')
+}
+
+UserSchema.methods.validRecoveryCode = function (recoveryCode) {
+  const hash = crypto
+    .pbkdf2Sync(recoveryCode, this.recovery_salt, 10000, 512, 'sha512')
+    .toString('hex')
+  return this.recovery_hash === hash
 }
 
 UserSchema.methods.data = function () {

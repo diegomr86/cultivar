@@ -3,8 +3,7 @@
   <div>
     <b-media class="pt-2" no-body>
       <b-media-aside>
-        <User v-if="$auth.loggedIn" :user="currentUser" />
-        <User v-else />
+        <User />
       </b-media-aside>
       <b-media-body>
         <b-form-textarea

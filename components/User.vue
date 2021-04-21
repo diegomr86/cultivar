@@ -7,15 +7,17 @@
         v-if="profile.picture && profile.picture.url"
         v-b-tooltip.hover
         :title="userLabel(profile)"
+        :alt="userLabel(profile)"
         :src="profile.picture.url"
         class="mr-1"
         size="2rem"
-        :alt="userLabel(profile)"
       />
       <b-avatar
         v-else-if="profile.code"
+        v-b-tooltip.hover
         class="mr-1"
         size="2rem"
+        :title="userLabel(profile)"
         :alt="userLabel(profile)"
         :text="profile.code"
       />
@@ -39,12 +41,23 @@ export default {
   },
   data() {
     return {
-      profile: this.user,
+      loadedUser: null,
     }
   },
+  computed: {
+    profile() {
+      if (this.user) {
+        return this.user
+      } else if (this.loadedUser) {
+        return this.loadedUser
+      } else {
+        return this.currentUser
+      }
+    },
+  },
   async created() {
-    if (!this.profile && this.id) {
-      this.profile = await this.$axios.$get('/api/users/' + this.id)
+    if (this.id) {
+      this.loadedUser = await this.$axios.$get('/api/users/' + this.id)
     }
   },
 }

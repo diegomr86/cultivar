@@ -13,10 +13,10 @@
               <b-form-group
                 label="Digite seu nome de usuário, e-mail ou telefone"
               >
-                <b-form-input v-model="form.email" />
+                <b-form-input v-model="user_login" />
               </b-form-group>
               <button
-                v-if="form.email"
+                v-if="user_login"
                 type="submit"
                 class="btn btn-primary btn-lg btn-block"
               >
@@ -33,23 +33,20 @@
                     <template #aside>
                       <User :user="user" />
                     </template>
-                    <h5 class="pt-1">
+                    <h5 class="mb-0">
                       {{ userLabel(user) }}
                     </h5>
                     <a @click="clearForm">
-                      <small>
-                        <i class="fas fa-exchange-alt" />
-                        Trocar de usuário
-                      </small>
+                      <small> Trocar usuário </small>
                     </a>
                   </b-media>
                   <p>Vamos cadastrar sua senha?</p>
                   <b-form-group label="Digite sua senha">
-                    <b-form-input v-model="form.password" type="password" />
+                    <b-form-input v-model="user_password" type="password" />
                   </b-form-group>
                   <b-form-group label="Confirme sua senha">
                     <b-form-input
-                      v-model="form.confirm_password"
+                      v-model="user_password_confirmation"
                       type="password"
                     />
                   </b-form-group>
@@ -99,23 +96,26 @@
                     <template #aside>
                       <User :user="user" />
                     </template>
-                    <h5 class="pt-1">
+                    <h5 class="mb-0">
                       {{ userLabel(user) }}
                     </h5>
-                    <div>
-                      <a @click="clearForm">
-                        <small>
-                          <i class="fas fa-exchange-alt" />
-                          Trocar de usuário
-                        </small>
-                      </a>
-                    </div>
+                    <a @click="clearForm">
+                      <small> Trocar usuário </small>
+                    </a>
                   </b-media>
-                  <b-form-group label="Digite sua senha para continuar">
-                    <b-form-input v-model="form.password" type="password" />
+                  <b-form-group
+                    v-if="!forgot_password"
+                    label="Digite sua senha para continuar"
+                    class="mb-0"
+                  >
+                    <b-form-input v-model="user_password" type="password" />
                   </b-form-group>
+                  <ForgotPassword
+                    :user="user"
+                    @click="forgot_password = true"
+                  />
                   <button
-                    v-if="form.password"
+                    v-if="user_password"
                     type="submit"
                     class="btn btn-primary btn-lg btn-block"
                   >
@@ -135,9 +135,12 @@ export default {
   data() {
     return {
       user: this.$auth.user,
+      user_login: 'diegomr86@gmail.com',
+      user_password: '',
+      user_password_confirmation: '',
+      forgot_password: false,
       form: {
-        email: 'diegomr86@gmail.com',
-        password: '',
+        email: '',
         username: '',
         phone: '',
         name: '',
@@ -170,20 +173,23 @@ export default {
   },
   methods: {
     async findUser() {
-      if (this.form.email) {
+      if (this.user_login) {
         this.user = await this.$axios
-          .$get('/api/users/' + this.form.email + '/find_or_create')
+          .$get('/api/users/' + this.user_login + '/find_or_create')
           .catch(this.showError)
         if (this.user && this.user.status === 'pending_password') {
-          this.form.password = 'password'
+          this.user_password = 'password'
           await this.login()
         }
         this.populateForm()
+        this.forgot_password = null
       }
     },
     async login() {
       await this.$auth
-        .loginWith('local', { data: this.form })
+        .loginWith('local', {
+          data: { email: this.user_login, password: this.user_password },
+        })
         .catch(this.showError)
       if (this.$auth.loggedIn) {
         if (this.user.status === 'registered') {
@@ -195,8 +201,8 @@ export default {
     },
     async setPassword() {
       if (
-        this.form.password &&
-        this.form.password === this.form.confirm_password
+        this.user_password &&
+        this.user_password === this.user_password_confirmation
       ) {
         this.user = await this.$axios
           .$post('/api/users/set_password', this.form)
